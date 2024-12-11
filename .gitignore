@@ -1,3 +1,7 @@
 # Config fodlers
 .venv
 .vscode
+
+# Build folders
+build
+bin
