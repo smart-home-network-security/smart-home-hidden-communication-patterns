@@ -1,0 +1,14 @@
+# Libraries
+natsort
+fabric
+treelib
+
+# Custom
+dns-unbound-cache-reader
+profile-translator-blocklist
+signature-extraction
+smart-home-testbed
+
+# Data visualization
+matplotlib
+jupyter
