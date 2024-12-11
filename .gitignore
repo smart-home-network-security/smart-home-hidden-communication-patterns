@@ -1,6 +1,10 @@
-# Config fodlers
+# Config folders
 .venv
 .vscode
+
+# Cache folders
+__pycache__
+.pytest_cache
 
 # Build folders
 build

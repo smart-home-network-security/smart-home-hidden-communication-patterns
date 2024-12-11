@@ -1,0 +1,29 @@
+{
+    "root": {
+        "data": "root",
+        "children": [
+            {
+                "node1": {
+                    "data": "node1",
+                    "children": [
+                        {
+                            "node1.1": {
+                                "data": "node1.1"
+                            }
+                        },
+                        {
+                            "node1.2": {
+                                "data": "node1.2"
+                            }
+                        }
+                    ]
+                }
+            },
+            {
+                "node2": {
+                    "data": "node2"
+                }
+            }
+        ]
+    }
+}
