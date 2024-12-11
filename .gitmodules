@@ -1,0 +1,3 @@
+[submodule "firewall"]
+	path = firewall
+	url = git@forge.uclouvain.be:smart-home-network-security/firewall-blocklist.git
