@@ -1,0 +1,12 @@
+services:
+  cross-compilation:
+    image: fdekeers/openwrt_tl-wdr4900
+    #image: fdekeers/openwrt_linksys-wrt1200ac
+    container_name: openwrt_tl-wdr4900
+    env_file:
+      - docker.env
+    volumes:
+      - .:/home/user/iot-firewall
+    command: ["/home/user/iot-firewall/docker_cmd.sh", "tl-wdr4900", "1000", "1000"]
+    #command: ["/home/user/iot-firewall/docker_cmd.sh", "linksys-wrt1200ac", "1000", "1000"]
+    restart: no
