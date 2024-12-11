@@ -1,0 +1,35 @@
+# Device under test
+device:
+  name: TpLinkPlug
+  mac: 00:00:00:00:00:00
+  ipv4: 192.168.1.3
+  event: toggle
+  access-point-interface: wlan1
+
+# Network gateway
+gateway:
+  hostname: gateway
+
+# Access point running the firewall
+access-point:
+  hostname: access-point
+  ipv4: 192.168.1.2
+  connected-to: eno1
+
+# Experimental parameters
+exp-param:
+  n-events: 20
+  pcap-timeout: 20
+  wait-low: 40
+  wait-high: 150
+
+# Other hosts to capture packets from
+other-hosts:
+  - ipv4: 192.168.1.4
+    interface: wlan0
+
+# Hosts to filter out from the packet captures
+filter-hosts:
+  - 192.168.1.5
+  - 192.168.1.6
+  # ...
