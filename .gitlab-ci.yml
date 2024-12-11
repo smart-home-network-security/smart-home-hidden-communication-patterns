@@ -1,0 +1,11 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+
+job-unit-tests:
+  script:
+    - python3 -m venv .venv             # Create Python virtual environment
+    - source .venv/bin/activate         # Activate Python virtual environment
+    - pip3 install -r requirements.txt  # Install Python dependencies
+    - pip3 install pytest               # Install pytest
+    - pytest test/                      # Run tests
