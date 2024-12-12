@@ -478,8 +478,8 @@ def bfs_recursion(
 
                 if not has_exception:
                     # Merge device and other hosts' PCAPs
-                    local_pcap_path = local_pcap_path_device.replace("-device", "")
-                    pcaps_to_merge = glob.glob(local_pcap_path_device.replace("-device", "*"))
+                    local_pcap_path = local_pcap_path_device.replace("-device.pcap", ".pcap")
+                    pcaps_to_merge = glob.glob(local_pcap_path_device.replace("-device.pcap", "*.pcap"))
                     logger.info(f"PCAPs to merge: {pcaps_to_merge}")
                     logger.info(f"Output PCAP: {local_pcap_path}")
                     cmd = f"mergecap -w {local_pcap_path} {" ".join(pcaps_to_merge)}"
