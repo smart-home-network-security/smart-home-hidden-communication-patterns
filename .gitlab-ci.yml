@@ -9,3 +9,18 @@ job-unit-tests:
     - pip3 install -r requirements.txt  # Install Python dependencies
     - pip3 install pytest               # Install pytest
     - pytest test/                      # Run tests
+
+
+job-firewall-test:
+  script:
+    - sudo .ci_scripts/firewall-test/install_packages.sh
+    - ./build.sh
+    - .ci_scripts/firewall-test/run_tests.sh
+    - .ci_scripts/firewall-test/run_tests.sh valgrind
+    - .ci_scripts/firewall-test/run_cppcheck.sh
+    - .ci_scripts/firewall-test/add_nft_rules.sh
+
+  
+job-cross-compilation:
+  script:
+    - docker compose run --rm --remove-orphans cross-compilation /home/user/iot-firewall/docker_cmd.sh tl-wdr4900 $(id -u $(whoami)) $(id -g $(whoami))
