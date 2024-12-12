@@ -129,7 +129,7 @@ def start_traffic_capture(
     for filter_host in filter_hosts:
         if base_filter:
             base_filter += " and "
-        base_filter += f"not host {filter_host}"
+        base_filter += f"(not host {filter_host})"
     filter = None
 
     # Device traffic
@@ -168,7 +168,11 @@ def start_traffic_capture(
     # Start traffic capture on the device under test's interface
     final_filter = base_filter
     if filter is not None:
-        final_filter += f" and ({filter})"
+        if base_filter:
+            final_filter += " and ("
+        final_filter += filter
+        if base_filter:
+            final_filter += ")"
     device_traffic_cmd += f" \"{final_filter}\""
     host.run(device_traffic_cmd, pty=True, asynchronous=True)
 
@@ -258,6 +262,7 @@ def bfs_recursion(
     event = device_metadata[ConfigKeys.EVENT.value]
     device_event = f"{device_name}-{event}"
     event_dir = os.path.join(args.device_dir, event)
+    ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
 
     # Get next policy to process
     policy_name = queue.popleft()
@@ -291,7 +296,6 @@ def bfs_recursion(
         translate_policies(device_data, policies, nfqueue_name=nfqueue_name, output_dir=policy_dir)
         nft_script_path = os.path.join(policy_dir, NFTABLES_SCRIPT)
         
-        ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
         try:
             copy_to_remote(ap_hostname, nft_script_path, ROUTER_NFTABLES_SCRIPT)
         except Exception as e:
@@ -416,6 +420,7 @@ def bfs_recursion(
         except KeyError:
             filter_hosts = []
         
+        pcap_timeout = config[ConfigKeys.EXP_PARAM.value][ConfigKeys.PCAP_TIMEOUT.value]
         start_traffic_capture(router,
                               interface,
                               router_pcap_path,
@@ -434,7 +439,6 @@ def bfs_recursion(
             logger.info(f"Stopped packet capture for event {device_event}")
         else:
             logger.info(f"Executed event \"{device_event}\"")
-            pcap_timeout = config[ConfigKeys.EXP_PARAM.value][ConfigKeys.PCAP_TIMEOUT.value]
             time.sleep(pcap_timeout)
             # Stop packet capture        
             router.run("killall tcpdump")
@@ -577,12 +581,12 @@ def main() -> None:
 
     parser = argparse.ArgumentParser(description="Run experiments for dynamic fingerprinting of IoT devices")
     ## Experimental setup
-    # Positional argument #1: directory of the device under test
-    parser.add_argument("device_dir", type=str, help="Directory of the device under test")
+    # Optional argument -c: config file
+    parser.add_argument("-c", "--config", type=str, default="config.yaml", help="Path to configuration file. Default is `config.yaml`.")
+    # Optional argument -d: device directory
+    parser.add_argument("-d", "--device-dir", type=str, help="Directory of the device under test. By default, creates a new directory in the current working directory.")
     # Optional argument -l: log file
     parser.add_argument("-l", "--log", type=str, help="Path to a log file to write")
-    # Optional argument -c: config file
-    parser.add_argument("-c", "--config", type=str, default="config.yaml", help="Path to configuration file")
     ## Data structures
     # Optional argument --tree: tree file
     parser.add_argument("--tree", type=str, default=None, help="Path to a tree file to load")
@@ -627,7 +631,14 @@ def main() -> None:
         logger.error(f"Invalid device IPv4 address: {device_ipv4}")
         exit(-1)
 
-    event_dir = os.path.join(args.device_dir, config[ConfigKeys.EVENT.value][ConfigKeys.NAME.value])
+    device_name = device_metadata[ConfigKeys.NAME.value]
+    event = device_metadata[ConfigKeys.EVENT.value]
+    event_dir = os.path.join(args.device_dir, event)
+    
+    # If device directory is not provided, create a new one
+    if args.device_dir is None:
+        args.device_dir = os.path.join(os.getcwd(), device_name)
+    os.makedirs(args.device_dir, exist_ok=True)
  
 
     # Logger config
@@ -642,8 +653,8 @@ def main() -> None:
     # Test connectivity
     ap_ip = ip_address(config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.IPV4.value])
     interface_to_ap = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.CONNECTED_TO.value]
-    if not is_connected(ap_ip, interface_to_ap):
-        raise Exception(f"Could not reach {ap_ip} on {interface_to_ap}")
+    # if not is_connected(ap_ip, interface_to_ap):
+    #     raise Exception(f"Could not reach {ap_ip} on {interface_to_ap}")
     # Setup SSH connections
     ssh_config = Config(overrides={"run": {"hide": True}})
     ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]

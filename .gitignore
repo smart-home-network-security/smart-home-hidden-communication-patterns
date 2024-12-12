@@ -10,5 +10,8 @@ __pycache__
 build
 bin
 
+# Data folders
+data
+
 # Local test scripts
 test.py
