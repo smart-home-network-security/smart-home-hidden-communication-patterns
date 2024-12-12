@@ -38,3 +38,4 @@ add_compile_options(-Wall -Werror -Wno-unused-variable -O3)           # Producti
 
 # Subdirectories
 add_subdirectory(firewall)
+add_subdirectory(devices)
