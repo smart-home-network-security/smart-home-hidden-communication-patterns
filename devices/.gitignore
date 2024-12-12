@@ -2,3 +2,7 @@
 *.txt
 *.log
 *.pcap
+*.nft
+*.c
+*.csv
+*.json
