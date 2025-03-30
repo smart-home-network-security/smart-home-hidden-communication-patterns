@@ -10,6 +10,7 @@ import time
 import random
 import logging
 import argparse
+import importlib
 from copy import deepcopy
 import subprocess
 from fabric import Connection, Config
@@ -74,6 +75,9 @@ class ConfigKeys(Enum):
     PCAP_TIMEOUT = "pcap-timeout"
     WAIT_LOW     = "wait-low"
     WAIT_HIGH    = "wait-high"
+
+    # Boot event's controllable plug(s)
+    BOOT_PLUGS = "boot-plugs"
 
     # Other hosts to capture packets from
     OTHER_HOSTS = "other-hosts"
@@ -263,6 +267,7 @@ def bfs_recursion(
     device_event = f"{device_name}-{event}"
     event_dir = os.path.join(args.device_dir, event)
     ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
+    boot_plugs = config[ConfigKeys.BOOT_PLUGS.value] if event == "boot" else {}
 
     # Get next policy to process
     policy_name = queue.popleft()
@@ -354,7 +359,7 @@ def bfs_recursion(
     os.makedirs(traces_dir, exist_ok=True)
 
     ### Start app
-    if not is_app_on:
+    if not is_app_on and event != "boot":
         for _ in range(5):
             try:
                 device.start_app()
@@ -389,13 +394,14 @@ def bfs_recursion(
         wait_time = random.randint(wait_low, wait_high)
 
         # Get device state before event execution
-        try:
-            state_before = device.get_state()
-        except Exception:
-            logger.error("Could not get device state before event execution.")
-            logger.info(f"Waiting {wait_time} seconds before next event...")
-            time.sleep(wait_time)
-            continue
+        if event != "boot":
+            try:
+                state_before = device.get_state()
+            except Exception:
+                logger.error("Could not get device state before event execution.")
+                logger.info(f"Waiting {wait_time} seconds before next event...")
+                time.sleep(wait_time)
+                continue
         
         # Append timestamp
         timestamp = int(time.time())
@@ -430,7 +436,11 @@ def bfs_recursion(
 
         # Trigger user event
         try:
-            getattr(device, event)()  # Add necessary additional arguments here
+            if event == "boot":
+                for plug in boot_plugs.values():
+                    plug.boot()
+            else:
+                getattr(device, event)()  # Add necessary additional arguments here
         except IndexError:
             logger.error("Could not connect to ADB device.")
             is_event_successful = False
@@ -446,7 +456,13 @@ def bfs_recursion(
             # Update DNS table
             dns_table = update_dns_table(dns_table, host=gateway_hostname)
             # Check if event was successful
-            is_event_successful = device.is_event_successful(state_before)
+            is_event_successful = device.is_event_successful(state_before) if event != "boot" else True
+
+            # If event is "boot", shutdown device before next iteration
+            if event == "boot":
+                for plug in boot_plugs.values():
+                    plug.shutdown()
+        
 
         if is_event_successful:
             logger.info(f"Event {device_event} was successful.")
@@ -505,17 +521,18 @@ def bfs_recursion(
 
 
     ### Close app
-    for _ in range(5):
-        try:
-            device.close_app()
-        except IndexError:
-            is_app_on = True
-            logger.error("Could not connect to ADB device.")
-            logger.error("Retrying in 10 seconds...")
-            time.sleep(10)
-        else:
-            is_app_on = False
-            break
+    if event != "boot":
+        for _ in range(5):
+            try:
+                device.close_app()
+            except IndexError:
+                is_app_on = True
+                logger.error("Could not connect to ADB device.")
+                logger.error("Retrying in 10 seconds...")
+                time.sleep(10)
+            else:
+                is_app_on = False
+                break
 
 
     # Flush firewall
@@ -630,10 +647,24 @@ def main() -> None:
     except ValueError:
         logger.error(f"Invalid device IPv4 address: {device_ipv4}")
         exit(-1)
+        
 
     device_name = device_metadata[ConfigKeys.NAME.value]
     event = device_metadata[ConfigKeys.EVENT.value]
     event_dir = os.path.join(args.device_dir, event)
+
+    if event == "boot":
+        try:
+            config_boot_plugs = config[ConfigKeys.BOOT_PLUGS.value]
+        except KeyError:    
+            logger.error("Boot plugs not found in config file.")
+            exit(-1)
+        else:
+            config[ConfigKeys.BOOT_PLUGS.value] = {}
+            boot_plugs = config[ConfigKeys.BOOT_PLUGS.value]
+            for name, data in config_boot_plugs.items():
+                plug_class = getattr(importlib.import_module("utils.power_cycle"), name)
+                boot_plugs[name] = plug_class(**data)
     
     # If device directory is not provided, create a new one
     if args.device_dir is None:
@@ -660,11 +691,12 @@ def main() -> None:
     ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
     router = Connection(ap_hostname, config=ssh_config)  # LAN AP
     # Start adb
-    cmd = "adb devices"
-    proc = subprocess.run(cmd.split(), capture_output=True)
-    logger.info(str(proc.stdout.decode()))
-    if proc.stderr:
-        logger.error(str(proc.stderr.decode()))
+    if event != "boot":
+        cmd = "adb devices"
+        proc = subprocess.run(cmd.split(), capture_output=True)
+        logger.info(str(proc.stdout.decode()))
+        if proc.stderr:
+            logger.error(str(proc.stderr.decode()))
 
 
     ## Data structures
@@ -721,12 +753,21 @@ def main() -> None:
         device_metadata[ConfigKeys.IPV4.value],
         # Add necessary additional arguments here
         )
-    device.close_app()  # Reset app before starting recursion
+    
+    # Set in initial state
+    if event == "boot":
+        # Shutdown devices before starting recursion
+        for plug in boot_plugs.values():
+            plug.shutdown()
+    else:
+        device.close_app()  # Reset app before starting recursion
+
     try:
         bfs_recursion(args, config, device, router, tree, queue)
     finally:
         # Clean up
-        device.close_app()
+        if event != "boot":
+            device.close_app()
         router.run("nft flush ruleset")
         router.run(f"killall {NFQUEUE_EXEC}", warn=True)
 
