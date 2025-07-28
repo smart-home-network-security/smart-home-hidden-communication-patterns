@@ -54,9 +54,10 @@ def test_init_empty_tree() -> None:
     """
     tree = tree_utils.init_empty_tree()
     id = "0_root"
+    data_empty = {"depth": 0, "flows": []}
     assert isinstance(tree, Tree)
     assert tree.get_node(id) is not None
-    assert tree.get_node(id).data == {"depth": 0, "flows": []}
+    assert tree.get_node(id).data == data_empty
 
 
 def test_build_tree() -> None:
