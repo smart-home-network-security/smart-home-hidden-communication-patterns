@@ -56,7 +56,7 @@ def test_init_empty_tree() -> None:
     id = "0_root"
     assert isinstance(tree, Tree)
     assert tree.get_node(id) is not None
-    assert tree.get_node(id).data == (0, [])
+    assert tree.get_node(id).data == {"depth": 0, "flows": []}
 
 
 def test_build_tree() -> None:
@@ -157,22 +157,22 @@ def test_save_to_json(tmp_path: Path) -> None:
         json.load(f)
 
     # Indicate last policy
-    tree_utils.save_to_json(tree, tree_json_path, last_policy_name="node1.2")
+    tree_utils.save_to_json(tree, tree_json_path, last_id="node1.2")
     assert os.path.exists(tree_json_path)
     with open(tree_json_path, "r") as f:
         json.load(f)
 
 
-def test_find_last_policy() -> None:
+def test_find_last_node() -> None:
     """
-    Unit test for the function `find_last_policy`,
+    Unit test for the function `find_last_node`,
     which finds the last policy in a tree dictionary.
     """
     # With last policy
     expected = "node1.2"
-    actual = tree_utils.find_last_policy(tree_data_with_last)
+    actual = tree_utils.find_last_node(tree_data_with_last)
     assert actual == expected
 
     # Without last policy
     with pytest.raises(KeyError):
-        tree_utils.find_last_policy(tree_data)
+        tree_utils.find_last_node(tree_data)

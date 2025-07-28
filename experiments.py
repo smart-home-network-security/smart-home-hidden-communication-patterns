@@ -25,7 +25,7 @@ from profile_translator_blocklist import translate_policies
 from signature_extraction.event_signature_extraction import pcaps_to_signature_pattern
 from smart_home_testbed import init_device
 import utils.tree as tree_utils
-from utils.policy import tree_contains_policy
+from utils.heuristic import tree_contains_policy
 
 
 ##### CONFIG #####

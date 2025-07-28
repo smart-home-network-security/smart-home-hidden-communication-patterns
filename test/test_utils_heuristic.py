@@ -1,5 +1,5 @@
 """
-Unit tests for the `utils.policy` module.
+Unit tests for the `utils.heuristic` module.
 """
 
 # Imports
@@ -12,7 +12,7 @@ self_path = os.path.abspath(__file__)
 self_dir = os.path.dirname(self_path)
 parent_dir = os.path.dirname(self_dir)
 sys.path.append(parent_dir)
-from utils.policy import compare_policies, contains_policy
+from utils.heuristic import compare_policies, contains_policy
 
 
 ### TEST VARIABLES ###
