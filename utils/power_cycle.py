@@ -6,9 +6,10 @@ from __future__ import annotations
 import sys
 import os
 from enum import StrEnum
+import threading
 import asyncio
-from kasa import Discover
-from tapo import ApiClient
+from kasa import Device
+from tapo import ApiClient, PlugEnergyMonitoringHandler
 
 import logging
 logger_name = os.path.basename(__name__)
@@ -63,11 +64,52 @@ class Plug:
             raise ValueError(f"Plug class {name} not found in module {__name__}")
 
         return plug_class(**kwargs)
+    
+
+    def __init__(self, ipv4: str) -> None:
+        """
+        Constructor.
+        Initialize the device with its IP address and start the asyncio event loop.
+
+        Args:
+            ipv4 (str): The device's IPv4 address.
+        """
+        # Device's IPv4 address
+        self.ipv4 = ipv4
+
+        # asyncio event loop
+        self.loop = asyncio.new_event_loop()
+        self.thread = threading.Thread(target=self._start_loop, daemon=True)
+        self.thread.start()
+    
+
+    def _start_loop(self):
+        """
+        Start the asyncio event loop, and run it forever.
+        """
+        asyncio.set_event_loop(self.loop)
+        self.loop.run_forever()
+    
+
+    async def _async_boot(self) -> None:
+        """
+        Asynchronously turn on the plug.
+        This method should be overridden by subclasses.
+        """
+        raise NotImplementedError("Subclasses must implement this method.")
 
 
     def boot(self):
         """
         Turn on the plug.
+        """
+        asyncio.run_coroutine_threadsafe(self._async_boot(), self.loop)
+
+    
+    async def _async_shutdown(self):
+        """
+        Asynchronously turn off the plug.
+        This method should be overridden by subclasses.
         """
         raise NotImplementedError("Subclasses must implement this method.")
 
@@ -76,7 +118,7 @@ class Plug:
         """
         Turn off the plug.
         """
-        raise NotImplementedError("Subclasses must implement this method.")
+        asyncio.run_coroutine_threadsafe(self._async_shutdown(), self.loop)
 
 
 class TpLinkPlug(Plug):
@@ -91,37 +133,31 @@ class TpLinkPlug(Plug):
         Args:
             ipv4 (str): The IPv4 address of the plug.
         """
-        self.ipv4 = ipv4
-    
+        # Superclass constructor
+        super().__init__(ipv4)
 
-    async def _async_boot(self):
+        # TP-Link connector
+        self.device_tplink: Device = None
+
+
+    async def _async_boot(self) -> None:
         """
         Asynchronously turn on the TP-Link plug.
         """
-        plug = await Discover.discover_single(self.ipv4)
-        await plug.turn_on()
-    
+        if self.device_tplink is None:
+            self.device_tplink = await Device.connect(host=self.ipv4)
 
-    def boot(self):
-        """
-        Turn on the TP-Link plug.
-        """
-        asyncio.run(self._async_boot())
+        await self.device_tplink.turn_on()
 
 
     async def _async_shutdown(self):
         """
         Asynchronously turn off the TP-Link plug.
         """
-        plug = await Discover.discover_single(self.ipv4)
-        await plug.turn_off()
-    
+        if self.device_tplink is None:
+            self.device_tplink = await Device.connect(host=self.ipv4)
 
-    def shutdown(self):
-        """
-        Turn off the TP-Link plug.
-        """
-        asyncio.run(self._async_shutdown())
+        await self.device_tplink.turn_off()
 
 
 class TapoPlug(Plug):
@@ -129,44 +165,42 @@ class TapoPlug(Plug):
     Class representing a controllable Tapo P110 power plug.
     """
 
-    def __init__(self, username: str, password: str, ipv4: str) -> None:
+    def __init__(self, ipv4: str, username: str, password: str) -> None:
         """
         Constructor.
 
         Args:
+            ipv4 (str): The IP address of the plug.
             username (str): The Tapo account username.
             password (str): The Tapo account password.
-            ipv4 (str): The IP address of the plug.
         """
-        self.client = ApiClient(username, password)
-        self.ipv4 = ipv4
+        # Superclass constructor
+        super().__init__(ipv4)
+
+        # Tapo connector
+        self.client = ApiClient(username=username, password=password)
+        self.device: PlugEnergyMonitoringHandler = None
     
 
     async def _async_boot(self):
         """
-        Turn on the Tapo plug.
+        Asynchronously turn on the Tapo plug.
         """
-        plug = await self.client.p110(self.ipv4)
-        await plug.on()
-
-    
-    def boot(self):
-        """
-        Turn on the TP-Link plug.
-        """
-        asyncio.run(self._async_boot())
+        if self.device is None:
+            # Create a Tapo plug device handler
+            self.device = await self.client.p110(self.ipv4)
+        
+        # Turn on the plug
+        await self.device.on()
 
 
     async def _async_shutdown(self):
         """
-        Turn off the Tapo plug.
+        Asynchronously turn off the Tapo plug.
         """
-        plug = await self.client.p110(self.ipv4)
-        await plug.off()
+        if self.device is None:
+            # Create a Tapo plug device handler
+            self.device = await self.client.p110(self.ipv4)
 
-    
-    def shutdown(self):
-        """
-        Turn on the TP-Link plug.
-        """
-        asyncio.run(self._async_shutdown())
+        # Turn off the plug
+        await self.device.off()
