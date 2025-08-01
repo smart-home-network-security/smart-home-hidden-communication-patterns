@@ -23,9 +23,11 @@ from custom_types import mac_address, ip_address
 from dns_unbound_cache_reader import read_dns_cache, update_dns_table
 from profile_translator_blocklist import translate_policies
 from signature_extraction.event_signature_extraction import pcaps_to_signature_pattern
-from smart_home_testbed import init_device
+from signature_extraction.network.FlowFingerprint import FlowFingerprint
+from smart_home_testbed import init_device, close_device
 import utils.tree as tree_utils
-from utils.heuristic import tree_contains_policy
+from utils.heuristic import get_node_depth, get_node_flows, list_contains_flow, tree_contains_flow, list_contains_path_flows
+from utils.power_cycle import Plug
 
 
 ##### CONFIG #####
@@ -41,7 +43,7 @@ ROUTER_NFQUEUE_EXEC = os.path.join("/", "tmp", NFQUEUE_EXEC)
 logger_name = os.path.basename(__name__)
 logger = logging.getLogger(logger_name)
 
-last_policy = None
+last_node = None
 is_app_on = False
 
 
@@ -70,11 +72,13 @@ class ConfigKeys(Enum):
     INTERFACE = "interface"
 
     # Experimental parameters
-    EXP_PARAM    = "exp-param"
-    N_EVENTS     = "n-events"
-    PCAP_TIMEOUT = "pcap-timeout"
-    WAIT_LOW     = "wait-low"
-    WAIT_HIGH    = "wait-high"
+    EXP_PARAM          = "exp-param"
+    NODE_PRUNING       = "node-pruning"
+    MATCH_RANDOM_PORTS = "match-random-ports"
+    N_EVENTS           = "n-events"
+    PCAP_TIMEOUT       = "pcap-timeout"
+    WAIT_LOW           = "wait-low"
+    WAIT_HIGH          = "wait-high"
 
     # Boot event's controllable plug(s)
     BOOT_PLUGS = "boot-plugs"
@@ -100,11 +104,13 @@ def is_connected(ip: str, interface: str = "") -> bool:
         bool: True if host could be reached, False otherwise 
     """
     cmd = f"ping -w 5 -I {interface} {ip}"
-    proc = subprocess.run(cmd.split(), capture_output=True)
-    logger.info(str(proc.stdout.decode()))
+    proc = subprocess.run(cmd.split(), capture_output=True, text=True)
+    logger.info(str(proc.stdout.strip()))
     if proc.stderr:
-        logger.warning(str(proc.stderr.decode()))
-    return proc.returncode == 0
+        logger.warning(str(proc.stderr.strip()))
+    returncode = proc.returncode
+    del proc
+    return returncode == 0
 
 
 ##### AUXILIARY FUNCTIONS #####
@@ -193,14 +199,14 @@ def copy_to_remote(remote_host: str, local_file: str, remote_file: str) -> None:
         Exception: if the file could not be copied
     """
     try:
-        cmd = f"scp {local_file} {remote_host}:{remote_file}"
-        subprocess.run(cmd.split(), check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        cmd = ["scp", f"\"{local_file}\"", f"{remote_host}:\"{remote_file}\""]
+        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         try:
-            cmd = f"scp -O {local_file} {remote_host}:{remote_file}"
-            subprocess.run(cmd.split(), check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            cmd = ["scp", "-O", f"\"{local_file}\"", f"{remote_host}:\"{remote_file}\""]
+            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.CalledProcessError:
-            raise Exception(f"Could not copy {local_file} to {remote_host}:{remote_file}")
+            raise Exception(f"Could not copy \"{local_file}\" to {remote_host}:\"{remote_file}\"")
 
 
 def copy_from_remote(remote_host: str, remote_file: str, local_file: str) -> None:
@@ -215,14 +221,14 @@ def copy_from_remote(remote_host: str, remote_file: str, local_file: str) -> Non
         Exception: if the file could not be copied
     """
     try:
-        cmd = f"scp {remote_host}:{remote_file} {local_file}"
-        subprocess.run(cmd.split(), check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        cmd = ["scp", f"{remote_host}:\"{remote_file}\"", f"\"{local_file}\""]
+        subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         try:
-            cmd = f"scp -O {remote_host}:{remote_file} {local_file}"
-            subprocess.run(cmd.split(), check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            cmd = ["scp", "-O", f"{remote_host}:\"{remote_file}\"", f"\"{local_file}\""]
+            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.CalledProcessError:
-            raise Exception(f"Could not copy {remote_host}:{remote_file} to {local_file}")
+            raise Exception(f"Could not copy {remote_host}:\"{remote_file}\" to \"{local_file}\"")
 
 
 
@@ -233,8 +239,10 @@ def bfs_recursion(
         config: dict,
         device: Any,
         router: Connection,
+        dns_table: dict,
         tree: Tree,
-        queue: deque
+        queue: deque,
+        paths_flows_processed: list[list[FlowFingerprint]]
     ) -> None:
     """
     Recursive function, called for each node of the tree.
@@ -244,11 +252,13 @@ def bfs_recursion(
         config (dict): configuration
         device (Device): device under test
         router (fabric.Connection): SSH connection to the router
+        dns_table (dict): mapping between IP addresses and their related domain name
         tree (treelib.Tree): tree structure
         queue (collections.deque): queue of policies to process
+        paths_flows_processed (list[list[FlowFingerprint]]): list of lists of flows already processed
     """
 
-    global last_policy, is_app_on
+    global last_node, is_app_on
 
     # Check if there are policies left to process
     if not queue:
@@ -265,14 +275,49 @@ def bfs_recursion(
     device_ipv4 = device_metadata[ConfigKeys.IPV4.value]
     event = device_metadata[ConfigKeys.EVENT.value]
     device_event = f"{device_name}-{event}"
-    event_dir = os.path.join(args.device_dir, event)
+    heuristic = "path_pruning" if args.path_pruning else "node_pruning"
+    event_dir = os.path.join(args.device_dir, heuristic, event)
     ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
     boot_plugs = config[ConfigKeys.BOOT_PLUGS.value] if event == "boot" else {}
 
-    # Get next policy to process
+    # Save intermediate tree
+    basename = os.path.join(event_dir, "tree")
+    tree_utils.save_trees(tree, basename, device_ipv4)
+
+    # Get next node to process
     policy_name = queue.popleft()
     node = tree.get_node(policy_name)
-    depth, policies = node.data
+    depth = get_node_depth(node)
+    flows = get_node_flows(node)
+    flow = flows[-1] if len(flows) > 0 else None
+
+    # Get experimental parameters
+    is_node_pruning = config[ConfigKeys.EXP_PARAM.value].get(ConfigKeys.NODE_PRUNING.value, False)
+    is_path_pruning = not is_node_pruning
+    match_random_ports = config[ConfigKeys.EXP_PARAM.value].get(ConfigKeys.MATCH_RANDOM_PORTS.value, False)
+
+    # Check if node must be processed
+    must_process_flow = (
+        # Node pruning
+        ( is_node_pruning and
+          flow is not None and
+          not tree_contains_flow(flow, tree, match_random_ports) )
+        or
+        # Path pruning
+        ( is_path_pruning and
+          flows and
+          not list_contains_path_flows(paths_flows_processed, flows, match_random_ports) )
+    )
+
+    if must_process_flow:
+        # Mark flow and flow path as processed
+        paths_flows_processed.append(flows)
+    else:
+        # Skip flow, continue recursion at next policy
+        logger.info(f"Skipping flow {flows} at depth {depth} ({heuristic})")
+        bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+        return
+
     policy_dir = os.path.join(event_dir, node.identifier)
     os.makedirs(policy_dir, exist_ok=True)
 
@@ -286,7 +331,7 @@ def bfs_recursion(
     router.run("nft flush ruleset")
     router.run(f"killall {NFQUEUE_EXEC}", warn=True)
     
-    if policies:
+    if flows:
 
         # Derive firewall config
         device_name = os.path.basename(args.device_dir)
@@ -296,8 +341,14 @@ def bfs_recursion(
             "ipv4": device_ipv4
         }
         nfqueue_name = f"{device_name}_{node.identifier}"
+
         # Replace special characters in nfqueue name
-        nfqueue_name = nfqueue_name.replace(':', '_').replace('#', '_').replace('.', '_').replace('/', '_').replace('*', '_').replace('?', '_').replace('=', '_')
+        special_chars = [' ', ':', '#', '.', '/', '*', '?', '=']
+        for char in special_chars:
+            nfqueue_name = nfqueue_name.replace(char, '_')
+    
+        # Generate firewall config
+        policies = [flow.extract_policy(device_ipv4) for flow in flows]
         translate_policies(device_data, policies, nfqueue_name=nfqueue_name, output_dir=policy_dir)
         nft_script_path = os.path.join(policy_dir, NFTABLES_SCRIPT)
         
@@ -306,7 +357,7 @@ def bfs_recursion(
         except Exception as e:
             logger.error(e)
             logger.error("Continue recursion at next policy...")
-            bfs_recursion(args, config, device, router, tree, queue)
+            bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
             return
         
         nfqueue_src_path = os.path.join(policy_dir, NFQUEUE_SRC)
@@ -319,20 +370,22 @@ def bfs_recursion(
             docker_env_file = os.path.join(BASE_DIR, "docker.env")
             with open(docker_env_file, "w") as f:
                 f.write(f"DEVICE={device_name}\n")
+                f.write(f"HEURISTIC={heuristic}\n")
                 f.write(f"EVENT={event}\n")
                 f.write(f"NFQUEUE={node.identifier}\n")
             cmd = f"docker compose run --rm --remove-orphans cross-compilation /home/user/iot-firewall/docker_cmd.sh tl-wdr4900 {os.getuid()} {os.getgid()}"
-            proc = subprocess.run(cmd.split(), capture_output=True)
-            logger.info(str(proc.stdout.decode()))
+            proc = subprocess.run(cmd.split(), capture_output=True, text=True)
+            logger.info(str(proc.stdout.strip()))
             if proc.stderr:
-                logger.error(str(proc.stderr.decode()))
+                logger.warning(str(proc.stderr.strip()))
+            del proc
 
             # Verify cross-compiled executable was correctly generated
             nfqueue_exec_path = os.path.join(BASE_DIR, "bin", nfqueue_name)
             if not os.path.isfile(nfqueue_exec_path):
                 logger.error(f"Cross-compiled nfqueue executable not found at {nfqueue_exec_path}")
                 logger.error("Continue recursion at next policy...")
-                bfs_recursion(args, config, device, router, tree, queue)
+                bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
                 return
 
             try:
@@ -340,7 +393,7 @@ def bfs_recursion(
             except Exception as e:
                 logger.error(e)
                 logger.error("Continue recursion at next policy...")
-                bfs_recursion(args, config, device, router, tree, queue)
+                bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
                 return
 
             router.run(f"{ROUTER_NFQUEUE_EXEC} &")
@@ -362,7 +415,10 @@ def bfs_recursion(
     if not is_app_on and event != "boot":
         for _ in range(5):
             try:
-                device.start_app()
+                if device_event == "HueLightEssentials-set_color":
+                    device.start_app(open_lamp_control=True)
+                else:
+                    device.start_app()
             except IndexError:
                 is_app_on = False
                 logger.error("Could not connect to ADB device.")
@@ -385,7 +441,7 @@ def bfs_recursion(
     n_events = config[ConfigKeys.EXP_PARAM.value][ConfigKeys.N_EVENTS.value]
     n_successful_events = 0
     gateway_hostname = config[ConfigKeys.GATEWAY.value][ConfigKeys.HOSTNAME.value]
-    dns_table = read_dns_cache(gateway_hostname)
+    dns_table = update_dns_table(dns_table, host=gateway_hostname)
     for _ in range(0, n_events):
 
         # Random wait time before next event
@@ -397,6 +453,7 @@ def bfs_recursion(
         if event != "boot":
             try:
                 state_before = device.get_state()
+                logger.debug(f"Device state before event: {state_before}")
             except Exception:
                 logger.error("Could not get device state before event execution.")
                 logger.info(f"Waiting {wait_time} seconds before next event...")
@@ -456,7 +513,9 @@ def bfs_recursion(
             # Update DNS table
             dns_table = update_dns_table(dns_table, host=gateway_hostname)
             # Check if event was successful
+            logger.debug(f"Device state after event: {device.get_state()}")
             is_event_successful = device.is_event_successful(state_before) if event != "boot" else True
+            logger.debug(f"Is event successful? {is_event_successful}")
 
             # If event is "boot", shutdown device before next iteration
             if event == "boot":
@@ -498,9 +557,9 @@ def bfs_recursion(
                     pcaps_to_merge = glob.glob(local_pcap_path_device.replace("-device.pcap", "*.pcap"))
                     logger.info(f"PCAPs to merge: {pcaps_to_merge}")
                     logger.info(f"Output PCAP: {local_pcap_path}")
-                    cmd = f"mergecap -w {local_pcap_path} {" ".join(pcaps_to_merge)}"
+                    cmd = f"mergecap -w \"{local_pcap_path}\" {" ".join(pcaps_to_merge)}"
                     try:
-                        subprocess.run(cmd.split(), check=True)
+                        subprocess.run(cmd.split(), check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                     except subprocess.CalledProcessError as e:
                         logger.error(e)
                     finally:
@@ -555,36 +614,44 @@ def bfs_recursion(
     # and continue recursion at next policy
     if n_successful_events < n_events / 2:
         logger.error(f"Event iteration for policy {policy_name} failed too many times. Continue recursion at next policy...")
-        bfs_recursion(args, config, device, router, tree, queue)
+        data = {
+            "depth":  depth,
+            "flows":  flows,
+            "failed": True
+        }
+        node.data = data
+        bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
         return
 
     # Event iteration was successful
 
     pcaps = glob.glob(f"{traces_dir}/*.pcap")
-    signature = pcaps_to_signature_pattern(pcaps, dns_table, pcap_timeout)
+    signature = pcaps_to_signature_pattern(pcaps, dns_table, pcap_timeout, match_random_ports)
     signature_csv_path = os.path.join(policy_dir, "signature.csv")
     signature.to_csv(signature_csv_path)
-    flows = signature.get_flows()
-    for flow in flows:
+    flows_new = signature.get_flows()
+    for flow_new in flows_new:
 
         # Generate next policy and add it to the tree
-        next_policy_name = f"{depth + 1}_{flow.get_unique_id()}"
-        next_policy = flow.extract_policy(device_ipv4)
-        next_policies = deepcopy(policies)
-        next_policies.append(next_policy)
+        next_flow_name = f"{depth + 1}_{flow_new.get_unique_id()}"
+        next_flows = deepcopy(flows)
+        next_flows.append(flow_new)
 
-        # If policy has not been processed yet,
-        # add it to the queue
-        if not tree_contains_policy(next_policy, tree):
-            last_policy = (next_policy_name, next_policy)
-            queue.append(next_policy_name)
+        # Add child node to the tree
+        data_new = {
+            "depth":  depth + 1,
+            "flows":  next_flows
+        }
+        tree.create_node(next_flow_name, next_flow_name, data=data_new, parent=node.identifier)
 
-        # Add child policy to the tree
-        tree.create_node(next_policy_name, next_policy_name, data=(depth + 1, next_policies), parent=node.identifier)
+        # If needed, add flow to queue
+        if not list_contains_flow(flow_new, flows, match_random_ports):
+            last_node = (next_flow_name, flow_new)
+            queue.append(next_flow_name)
     
 
     # Continue recursion
-    bfs_recursion(args, config, device, router, tree, queue)
+    bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
 
 
 
@@ -592,11 +659,11 @@ def bfs_recursion(
 
 def main() -> None:
 
-    global last_policy
+    global last_node
     
     ### ARGUMENT PARSING ###
 
-    parser = argparse.ArgumentParser(description="Run experiments for dynamic fingerprinting of IoT devices")
+    parser = argparse.ArgumentParser(description="Run experiments to uncover hidden communication patterns of consumer IoT devices.")
     ## Experimental setup
     # Optional argument -c: config file
     parser.add_argument("-c", "--config", type=str, default="config.yaml", help="Path to configuration file. Default is `config.yaml`.")
@@ -638,6 +705,7 @@ def main() -> None:
         logger.error(f"Invalid device MAC address: {device_mac}")
         exit(-1)
 
+    device_ipv4 = None
     try:
         device_ipv4 = device_metadata[ConfigKeys.IPV4.value]
         device_ipv4 = ip_address(device_ipv4)
@@ -663,14 +731,12 @@ def main() -> None:
             config[ConfigKeys.BOOT_PLUGS.value] = {}
             boot_plugs = config[ConfigKeys.BOOT_PLUGS.value]
             for name, data in config_boot_plugs.items():
-                plug_class = getattr(importlib.import_module("utils.power_cycle"), name)
-                boot_plugs[name] = plug_class(**data)
+                boot_plugs[name] = Plug.init_plug(name, **data)
     
     # If device directory is not provided, create a new one
     if args.device_dir is None:
         args.device_dir = os.path.join(os.getcwd(), device_name)
     os.makedirs(args.device_dir, exist_ok=True)
- 
 
     # Logger config
     log_file = os.path.join(event_dir, "experiments.log") if args.log is None else args.log
@@ -679,13 +745,20 @@ def main() -> None:
     logging.basicConfig(filename=log_file, filemode="w", level=logging.INFO)
     logger.info(f"Started experiments at {time.ctime()}")
 
+    # Check pruning heuristic
+    is_node_pruning = config[ConfigKeys.EXP_PARAM.value].get(ConfigKeys.NODE_PRUNING.value, False)
+    if is_node_pruning:
+        logger.info("Using node pruning heuristic.")
+    else:
+        logger.info("Using path pruning heuristic.")
+
 
     ## Network setup
     # Test connectivity
     ap_ip = ip_address(config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.IPV4.value])
     interface_to_ap = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.CONNECTED_TO.value]
-    # if not is_connected(ap_ip, interface_to_ap):
-    #     raise Exception(f"Could not reach {ap_ip} on {interface_to_ap}")
+    if not is_connected(ap_ip, interface_to_ap):
+        raise Exception(f"Could not reach {ap_ip} on {interface_to_ap}")
     # Setup SSH connections
     ssh_config = Config(overrides={"run": {"hide": True}})
     ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
@@ -693,17 +766,21 @@ def main() -> None:
     # Start adb
     if event != "boot":
         cmd = "adb devices"
-        proc = subprocess.run(cmd.split(), capture_output=True)
-        logger.info(str(proc.stdout.decode()))
+        proc = subprocess.run(cmd.split(), capture_output=True, text=True)
+        logger.debug(str(proc.stdout.strip()))
         if proc.stderr:
-            logger.error(str(proc.stderr.decode()))
+            logger.error(str(proc.stderr.strip()))
+        del proc
+    # Read the LAN gateway's DNS cache
+    gateway_hostname = config[ConfigKeys.GATEWAY.value][ConfigKeys.HOSTNAME.value]
+    dns_table = read_dns_cache(gateway_hostname)
 
 
     ## Data structures
 
     # Tree
     tree = None
-    last_policy = None
+    last_node = None
     if args.tree is not None:
         try:
             tree_json = {}
@@ -717,10 +794,10 @@ def main() -> None:
             tree = tree_utils.build_tree(Tree(), tree_json)
             try:
                 # Get last policy, if any
-                last_policy = tree_utils.find_last_policy(tree_json)
+                last_node = tree_utils.find_last_node(tree_json)
             except KeyError:
                 # No last policy found
-                last_policy = None
+                last_node = None
     else:
         # Initialize empty tree
         tree = tree_utils.init_empty_tree()
@@ -733,8 +810,8 @@ def main() -> None:
             with open(args.queue, "r") as f:
                 queue = deque(f.read().split(","))
                 # Add last policy read from tree, if any
-                if last_policy is not None:
-                    queue.appendleft(last_policy)
+                if last_node is not None:
+                    queue.appendleft(last_node)
         except FileNotFoundError:
             # Existing queue not found,
             # initialize empty queue
@@ -750,7 +827,7 @@ def main() -> None:
     device_name = os.path.basename(args.device_dir)
     device = init_device(
         device_name,
-        device_metadata[ConfigKeys.IPV4.value],
+        device_ipv4,
         # Add necessary additional arguments here
         )
     
@@ -763,7 +840,7 @@ def main() -> None:
         device.close_app()  # Reset app before starting recursion
 
     try:
-        bfs_recursion(args, config, device, router, tree, queue)
+        bfs_recursion(args, config, device, router, dns_table, tree, queue, [])
     finally:
         # Clean up
         if event != "boot":
@@ -771,23 +848,26 @@ def main() -> None:
         router.run("nft flush ruleset")
         router.run(f"killall {NFQUEUE_EXEC}", warn=True)
 
+        # Close SSH connection
+        router.close()
+
+        # Stop device
+        close_device(device)
+
         # Display final tree
         tree_utils.display_tree(tree)
         
         ### Save recursion data
         ## Tree
-        # TXT
-        tree_txt_path = os.path.join(event_dir, "tree.txt")
-        tree_utils.save_to_txt(tree, tree_txt_path)
-        # JSON
-        last_policy_name = last_policy[0] if last_policy else None
-        tree_json_path = os.path.join(event_dir, "tree.json")
-        tree_utils.save_to_json(tree, tree_json_path, last_policy_name)
+        basename = os.path.join(event_dir, "tree")
+        last_node_name = last_node[0] if last_node else None
+        tree_utils.save_trees(tree, basename, device_ipv4, last_node_name)
         ## Queue
         queue_path = os.path.join(event_dir, "queue.txt")
         with open(queue_path, "w") as f:
             f.write(",".join(queue))
 
 
+### ENTRY POINT ###
 if __name__ == "__main__":
     main()

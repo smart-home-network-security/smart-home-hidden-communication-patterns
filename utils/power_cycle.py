@@ -2,6 +2,8 @@
 Power on/off the device through a controllable power plug.
 """
 
+from __future__ import annotations
+import sys
 import os
 from enum import StrEnum
 import asyncio
@@ -17,8 +19,8 @@ class PLUG(StrEnum):
     """
     Enumeration of the controllable power plugs.
     """
-    TPLINK = "tplink"
-    TAPO   = "tapo"
+    TpLinkPlug = "TpLinkPlug"
+    TapoPlug   = "TapoPlug"
 
 
 class POWER(StrEnum):
@@ -32,10 +34,36 @@ class POWER(StrEnum):
 ### PLUG CLASSES ###
 
 class Plug:
-
     """
     Abstract base class for controllable power plugs.
     """
+
+    @staticmethod
+    def init_plug(name: str, **kwargs) -> Plug:
+        """
+        Factory method to initialize a plug based on its name.
+
+        Args:
+            name (str): The name of the plug.
+            kwargs (dict): Additional arguments for plug initialization (e.g., ipv4 address, username, password).
+        Returns:
+            Plug: An instance of the corresponding plug class.
+        """
+        # Check if the plug name is valid
+        try:
+            PLUG(name)
+        except ValueError:
+            raise ValueError(f"Unknown plug type: {name}")
+        
+        # Plug name is valid
+        # Initialize the plug based on its type
+        this_module = sys.modules[__name__]
+        plug_class = getattr(this_module, name, None)
+        if plug_class is None:
+            raise ValueError(f"Plug class {name} not found in module {__name__}")
+
+        return plug_class(**kwargs)
+
 
     def boot(self):
         """
