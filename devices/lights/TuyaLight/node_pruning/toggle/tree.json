@@ -1,0 +1,852 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.110-192.168.1.162_TCP_dst_6668_1732722883": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.255_UDP_dst_7000_1732724601": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_7000_1732724601": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.162-18.184.31.90_TCP_dst_8886_1732724601": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_m1.tuyaeu.com-192.168.1.110_TCP_src_8883_1732724601": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "dst-port": 6668
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.110-192.168.1.255_UDP_dst_7000_1732722883": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.162_TCP_dst_6668_1732734953": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.255_UDP_dst_7000_1732734953": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_7000_1732734953": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-m1.tuyaeu.com_TCP_dst_8883_1732734953": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "m1.tuyaeu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.162-18.184.31.90_TCP_dst_8886_1732734953": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "192.168.1.255"
+                  },
+                  "udp": {
+                    "dst-port": 7000
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.110-255.255.255.255_UDP_dst_7000_1732722883": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.162_TCP_dst_6668_1732730841": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.255_UDP_dst_7000_1732730841": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_7000_1732730841": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.162-18.184.31.90_TCP_dst_8886_1732730841": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_m1.tuyaeu.com-192.168.1.110_TCP_src_8883_1732730841": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "255.255.255.255"
+                  },
+                  "udp": {
+                    "dst-port": 7000
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.162-18.184.31.90_TCP_dst_8886_1732722883": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.162_TCP_dst_6668_1732726552": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.255_UDP_dst_7000_1732726552": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_7000_1732726552": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "18.184.31.90"
+                  },
+                  "tcp": {
+                    "dst-port": 8886
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_m1.tuyaeu.com-192.168.1.110_TCP_src_8883_1732722883": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.162_TCP_dst_6668_1732728855": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 6668
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.255_UDP_dst_7000_1732728855": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "192.168.1.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_7000_1732728855": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 7000
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.162-18.184.31.90_TCP_dst_8886_1732728855": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "18.184.31.90"
+                        },
+                        "tcp": {
+                          "dst-port": 8886
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_m1.tuyaeu.com-192.168.1.110_TCP_src_8883_1732728855": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "m1.tuyaeu.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "m1.tuyaeu.com",
+                    "dst": "192.168.1.110"
+                  },
+                  "tcp": {
+                    "dst-port": 41780,
+                    "src-port": 8883
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

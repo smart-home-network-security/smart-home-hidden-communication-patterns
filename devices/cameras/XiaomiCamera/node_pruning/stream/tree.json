@@ -1,0 +1,1888 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.110-192.168.1.161_UDP_dst_54321_1732527827": {
+          "children": [
+            {
+              "2_124.251.34.212-192.168.1.161_TCP_src_443_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "124.251.34.212",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.161_TCP_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-api.io.mi.com_TCP_dst_443_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.39.53_UDP_dst_32100_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.68.154_UDP_dst_32100_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732532640": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "self"
+                  },
+                  "udp": {
+                    "dst-port": 54321
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-110.43.39.53_UDP_dst_32100_1732527827": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.161_UDP_dst_54321_1732543820": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-183.84.5.219_TCP_dst_443_1732543820": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "183.84.5.219"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.110_TCP_1732543820": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732543820": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "110.43.39.53"
+                  },
+                  "udp": {
+                    "dst-port": 32100
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-110.43.68.154_UDP_dst_32100_1732527827": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.161_UDP_dst_54321_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.39.53_UDP_dst_32100_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.68.154_UDP_dst_32100_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-183.84.5.219_TCP_dst_443_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "183.84.5.219"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.110_TCP_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732546292": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "110.43.68.154"
+                  },
+                  "udp": {
+                    "dst-port": 32100
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-124.251.34.212_TCP_dst_443_1732527827": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.161_TCP_1732534829": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.161_UDP_dst_54321_1732534829": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.39.53_UDP_dst_32100_1732534829": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.68.154_UDP_dst_32100_1732534829": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1732534829": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732534829": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "124.251.34.212"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-192.168.1.110_TCP_1732527827": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.161_TCP_1732529986": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-192.168.1.161_UDP_dst_54321_1732529986": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-124.251.34.212_TCP_dst_443_1732529986": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "124.251.34.212"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732529986": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_cn.mqtt.io.mi.com-192.168.1.110_TCP_src_8883_1732529986": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.110"
+                  },
+                  "tcp": {}
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-42.157.165.251_UDP_dst_32100_1732527827": {
+          "children": [
+            {
+              "2_183.84.5.219-192.168.1.161_TCP_src_443_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "183.84.5.219",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-api.mijia.tech_TCP_dst_443_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "api.mijia.tech"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.39.53_UDP_dst_32100_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.68.154_UDP_dst_32100_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.110_TCP_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_cn.mqtt.io.mi.com-192.168.1.110_TCP_src_8883_1732541630": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "42.157.165.251"
+                  },
+                  "udp": {
+                    "dst-port": 32100
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.167-192.168.1.161_UDP_dst_54321_1732527827": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.167",
+                    "dst": "self"
+                  },
+                  "udp": {
+                    "dst-port": 54321
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_cn.mqtt.io.mi.com-192.168.1.110_TCP_src_8883_1732527827": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.161_UDP_dst_54321_1732537310": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.39.53_UDP_dst_32100_1732537310": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.39.53"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.68.154_UDP_dst_32100_1732537310": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.68.154"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-183.84.5.219_TCP_dst_443_1732537310": {
+                "children": [
+                  {
+                    "3_192.168.1.110-192.168.1.161_TCP_1732561920": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "cn.mqtt.io.mi.com",
+                                "dst": "192.168.1.110"
+                              },
+                              "tcp": {
+                                "src-port": 8883
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "183.84.5.219"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {}
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-192.168.1.161_UDP_dst_54321_1732561920": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "cn.mqtt.io.mi.com",
+                                "dst": "192.168.1.110"
+                              },
+                              "tcp": {
+                                "src-port": 8883
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "183.84.5.219"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "udp": {
+                                "dst-port": 54321
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-110.43.39.53_UDP_dst_32100_1732561920": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "cn.mqtt.io.mi.com",
+                                "dst": "192.168.1.110"
+                              },
+                              "tcp": {
+                                "src-port": 8883
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "183.84.5.219"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.39.53"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-110.43.68.154_UDP_dst_32100_1732561920": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "cn.mqtt.io.mi.com",
+                                "dst": "192.168.1.110"
+                              },
+                              "tcp": {
+                                "src-port": 8883
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "183.84.5.219"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.68.154"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-42.157.165.251_UDP_dst_32100_1732561920": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "cn.mqtt.io.mi.com",
+                                "dst": "192.168.1.110"
+                              },
+                              "tcp": {
+                                "src-port": 8883
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "183.84.5.219"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "42.157.165.251"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.167-192.168.1.161_UDP_dst_54321_1732561920": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "cn.mqtt.io.mi.com",
+                                "dst": "192.168.1.110"
+                              },
+                              "tcp": {
+                                "src-port": 8883
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "183.84.5.219"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.167",
+                                "dst": "self"
+                              },
+                              "udp": {
+                                "dst-port": 54321
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "183.84.5.219"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.110_TCP_1732537310": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {}
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1732537310": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.167-192.168.1.161_UDP_dst_54321_1732537310": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "cn.mqtt.io.mi.com",
+                          "dst": "192.168.1.110"
+                        },
+                        "tcp": {
+                          "src-port": 8883
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.167",
+                          "dst": "self"
+                        },
+                        "udp": {
+                          "dst-port": 54321
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "cn.mqtt.io.mi.com",
+                    "dst": "192.168.1.110"
+                  },
+                  "tcp": {
+                    "src-port": 8883
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

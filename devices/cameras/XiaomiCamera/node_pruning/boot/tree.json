@@ -1,0 +1,3935 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_110.43.0.83-192.168.1.161_TCP_src_80_1741534242": {
+          "children": [
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-ot.io.mi.com_1741539766": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "ot.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-ot.io.mi.com_UDP_src_54321_dst_8053_1741539766": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "ot.io.mi.com"
+                        },
+                        "udp": {
+                          "src-port": 54321,
+                          "dst-port": 8053
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "110.43.0.83",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "src-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741534242": {
+          "children": [
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-ot.io.mi.com_1741537020": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "ot.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-ot.io.mi.com_UDP_src_54321_dst_8053_1741537020": {
+                "children": [
+                  {
+                    "3_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-ot.io.mi.com_1741564400": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.0.83"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "GET",
+                                "uri": "/gslb*"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "ot.io.mi.com"
+                              },
+                              "udp": {
+                                "src-port": 54321,
+                                "dst-port": 8053
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "ot.io.mi.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-ot.io.mi.com_UDP_src_54321_dst_8053_1741564400": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.0.83"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "GET",
+                                "uri": "/gslb*"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "ot.io.mi.com"
+                              },
+                              "udp": {
+                                "src-port": 54321,
+                                "dst-port": 8053
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "ot.io.mi.com"
+                              },
+                              "udp": {
+                                "src-port": 54321,
+                                "dst-port": 8053
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "ot.io.mi.com"
+                        },
+                        "udp": {
+                          "src-port": 54321,
+                          "dst-port": 8053
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "110.43.0.83"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  },
+                  "http": {
+                    "response": false,
+                    "method": "GET",
+                    "uri": "/gslb*"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741556272": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "business.smartcamera.api.io.mi.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741542591": {
+                "children": [
+                  {
+                    "3_110.43.0.83-192.168.1.161_TCP_src_80_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "110.43.0.83",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 80
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.0.83"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "GET",
+                                "uri": "/gslb*"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "business.smartcamera.api.io.mi.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "business.smartcamera.api.io.mi.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-42.157.165.251_UDP_dst_32100_1741567133": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "114.114.114.114"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "42.157.165.251"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741542591": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741545314": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-114.114.114.114_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "114.114.114.114"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741545314": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741545314": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741545313": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-42.157.165.251_UDP_dst_32100_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741548143": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "42.157.165.251"
+                  },
+                  "udp": {
+                    "dst-port": 32100
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741558994": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741558994": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-ot.io.mi.com_1741558994": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "ot.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-ot.io.mi.com_UDP_src_54321_dst_8053_1741558994": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "ot.io.mi.com"
+                        },
+                        "udp": {
+                          "src-port": 54321,
+                          "dst-port": 8053
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "business.smartcamera.api.io.mi.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_TCP_dst_443_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_TCP_dst_443_1741550805": {
+                "children": [
+                  {
+                    "3_110.43.0.83-192.168.1.161_TCP_src_80_1741577986": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "110.43.0.83",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 80
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741577986": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.0.83"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "GET",
+                                "uri": "/gslb*"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-ot.io.mi.com_1741577986": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "ot.io.mi.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-ot.io.mi.com_UDP_src_54321_dst_8053_1741577986": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "ot.io.mi.com"
+                              },
+                              "udp": {
+                                "src-port": 54321,
+                                "dst-port": 8053
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_TCP_dst_443_1741550805": {
+                "children": [
+                  {
+                    "3_110.43.0.83-192.168.1.161_TCP_src_80_1741575298": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy3.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "110.43.0.83",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 80
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741575298": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy3.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "110.43.0.83"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "GET",
+                                "uri": "/gslb*"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-ot.io.mi.com_1741575298": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy3.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "ot.io.mi.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.161-ot.io.mi.com_UDP_src_54321_dst_8053_1741575298": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy2.mijia.tech"
+                              },
+                              "udp": {
+                                "dst-port": 32100
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "xiaomi5.p2psy3.mijia.tech"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "ot.io.mi.com"
+                              },
+                              "udp": {
+                                "src-port": 54321,
+                                "dst-port": 8053
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741550805": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "xiaomi5.p2psy2.mijia.tech"
+                  },
+                  "udp": {
+                    "dst-port": 32100
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741534242": {
+          "children": [
+            {
+              "2_110.43.0.83-192.168.1.161_TCP_src_80_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "110.43.0.83",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 80
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-110.43.0.83_TCP_dst_80_HTTP_response-False_method-GET_uri--gslb-_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "110.43.0.83"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "GET",
+                          "uri": "/gslb*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-business.smartcamera.api.io.mi.com_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "business.smartcamera.api.io.mi.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy2.mijia.tech_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy2.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-xiaomi5.p2psy3.mijia.tech_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "xiaomi5.p2psy3.mijia.tech"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_TCP_dst_443_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-42.157.165.251_UDP_dst_32100_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "42.157.165.251"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-business.smartcamera.api.io.mi.com_TCP_dst_443_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "business.smartcamera.api.io.mi.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_TCP_dst_443_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy2.mijia.tech_UDP_dst_32100_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy2.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_TCP_dst_443_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.161-xiaomi5.p2psy3.mijia.tech_UDP_dst_32100_1741553492": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "xiaomi5.p2psy3.mijia.tech"
+                        },
+                        "udp": {
+                          "dst-port": 32100
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "xiaomi5.p2psy3.mijia.tech"
+                  },
+                  "udp": {
+                    "dst-port": 32100
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

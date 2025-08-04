@@ -4,5 +4,3 @@
 *.nft
 *.c
 *.csv
-*.json
-!tree.json
