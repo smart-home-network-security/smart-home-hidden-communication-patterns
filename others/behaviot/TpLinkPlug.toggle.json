@@ -1,0 +1,48 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_plug_server_api": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "tcp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "use1-api.tplinkra.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_plug_server_devs": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "tcp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "devs.tplinkcloud.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

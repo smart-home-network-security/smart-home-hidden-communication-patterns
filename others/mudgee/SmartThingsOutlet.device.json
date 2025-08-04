@@ -1,0 +1,129 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "from-ipv4-smartthings-0": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-smartthings-1": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-smartthings-2": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "dc-na02-useast1.connect.smartthings.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-smartthings-4": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 1900
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-smartthings-5": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "DC.connect.smartthings.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "to-ipv4-smartthings-6": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 39400
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

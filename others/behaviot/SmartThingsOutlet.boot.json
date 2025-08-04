@@ -1,0 +1,67 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_fw-update": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "tcp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "fw-update2.smartthings.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_api": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "tcp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "api.smartthings.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_connect": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "tcp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "dc-na04-useast2.connect.smartthings.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

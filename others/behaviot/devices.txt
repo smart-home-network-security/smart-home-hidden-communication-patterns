@@ -1,0 +1,3 @@
+TP-Link HS110:      toggle
+SmartThings Outlet: boot
+D-Link camera:      stream

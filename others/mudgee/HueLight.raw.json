@@ -1,0 +1,401 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "from-ipv4-huebulb-0": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 67
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-1": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "www.ecdinterface.philips.com"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-2": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-3": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "www2.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-4": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 1900
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-6": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "time2.google.com"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-7": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "dcp.cpp.philips.com"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-8": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "time4.google.com"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-9": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 5353
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-10": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "time.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-11": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "diagnostics.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-12": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-13": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "ws.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-14": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "time3.google.com"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-15": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "fds.cpp.philips.com"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-16": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "time1.google.com"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-17": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "bridge.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-huebulb-18": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "tcp": {
+                    "src-port": 80
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv6-huebulb-1_icmpv6": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv6": {
+                    "dst": "fe80::1"
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv6-huebulb-2": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv6": {
+                    "dst": "fe80::1"
+                  },
+                  "udp": {
+                    "dst-port": 5353
+                  }
+                }
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

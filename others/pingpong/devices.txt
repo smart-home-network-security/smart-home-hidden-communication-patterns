@@ -1,0 +1,3 @@
+TP-Link HS110:      toggle
+SmartThings Outlet: toggle
+Hue light bulb:     toggle

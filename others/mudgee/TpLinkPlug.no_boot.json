@@ -1,0 +1,90 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "from-ipv4-tplinkplug-2": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "devs.tplinkcloud.com"
+                  },
+                  "tcp": {
+                    "dst-port": 50443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-8": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "src-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-11": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-15": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "tcp": {
+                    "src-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_wan": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "self"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

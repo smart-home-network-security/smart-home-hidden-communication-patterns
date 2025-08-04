@@ -1,0 +1,290 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "from-ipv4-tplinkplug-0": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "ru.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-2": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "devs.tplinkcloud.com"
+                  },
+                  "tcp": {
+                    "dst-port": 50443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-3": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "de.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-4": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "s1b.time.edu.cn"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-6": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "time-b.nist.gov"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-7": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "0.cn.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-8": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "src-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-9": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "1.asia.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-10": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "ca.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-11": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-12": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "us.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-13": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "uk.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-14": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "fr.pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "from-ipv4-tplinkplug-15": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "dst": "192.168.1.1"
+                  },
+                  "tcp": {
+                    "src-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

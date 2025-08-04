@@ -1,0 +1,48 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_cam_server_tcp": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "tcp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "*.auto.mydlink.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_cam_server_udp": {
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "udp": {},
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "*.auto.mydlink.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}
