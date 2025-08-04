@@ -1,7 +1,6 @@
 # Skip all experimental output files
 *.txt
 *.log
-*.pcap
 *.nft
 *.c
 *.csv
