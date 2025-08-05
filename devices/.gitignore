@@ -4,3 +4,7 @@
 *.nft
 *.c
 *.csv
+
+# Ignore PCAP files, except the explicitly anonymized ones
+*.pcap
+!*.anon.pcap
