@@ -198,14 +198,14 @@ def copy_to_remote(remote_host: str, local_file: str, remote_file: str) -> None:
         Exception: if the file could not be copied
     """
     try:
-        cmd = ["scp", f"\"{local_file}\"", f"{remote_host}:\"{remote_file}\""]
+        cmd = ["scp", local_file, f"{remote_host}:{remote_file}"]
         subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         try:
-            cmd = ["scp", "-O", f"\"{local_file}\"", f"{remote_host}:\"{remote_file}\""]
+            cmd = ["scp", "-O", local_file, f"{remote_host}:{remote_file}"]
             subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.CalledProcessError:
-            raise Exception(f"Could not copy \"{local_file}\" to {remote_host}:\"{remote_file}\"")
+            raise Exception(f"Could not copy {local_file} to {remote_host}:{remote_file}")
 
 
 def copy_from_remote(remote_host: str, remote_file: str, local_file: str) -> None:
@@ -220,14 +220,14 @@ def copy_from_remote(remote_host: str, remote_file: str, local_file: str) -> Non
         Exception: if the file could not be copied
     """
     try:
-        cmd = ["scp", f"{remote_host}:\"{remote_file}\"", f"\"{local_file}\""]
+        cmd = ["scp", f"{remote_host}:{remote_file}", local_file]
         subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         try:
-            cmd = ["scp", "-O", f"{remote_host}:\"{remote_file}\"", f"\"{local_file}\""]
+            cmd = ["scp", "-O", f"{remote_host}:{remote_file}", local_file]
             subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
         except subprocess.CalledProcessError:
-            raise Exception(f"Could not copy {remote_host}:\"{remote_file}\" to \"{local_file}\"")
+            raise Exception(f"Could not copy {remote_host}:{remote_file} to {local_file}")
 
 
 
@@ -268,13 +268,13 @@ def bfs_recursion(
     # There are policies left to process
 
     # Device metadata
-    device_name = os.path.basename(args.device_dir)
     device_metadata = config[ConfigKeys.DEVICE.value]
+    device_name = device_metadata[ConfigKeys.NAME.value]
     device_mac = device_metadata[ConfigKeys.MAC.value]
     device_ipv4 = device_metadata[ConfigKeys.IPV4.value]
     event = device_metadata[ConfigKeys.EVENT.value]
     device_event = f"{device_name}-{event}"
-    heuristic = "path_pruning" if args.path_pruning else "node_pruning"
+    heuristic = "node_pruning" if config.get(ConfigKeys.EXP_PARAM.value, {}).get(ConfigKeys.NODE_PRUNING.value, False) else "path_pruning"
     event_dir = os.path.join(args.device_dir, heuristic, event)
     ap_hostname = config[ConfigKeys.ACCESS_POINT.value][ConfigKeys.HOSTNAME.value]
     boot_plugs = config[ConfigKeys.BOOT_PLUGS.value] if event == "boot" else {}
@@ -287,6 +287,7 @@ def bfs_recursion(
     policy_name = queue.popleft()
     node = tree.get_node(policy_name)
     depth = tree_utils.get_node_depth(node)
+    is_root = depth == 0
     flows = tree_utils.get_node_flows(node)
     flow = flows[-1] if len(flows) > 0 else None
 
@@ -295,27 +296,29 @@ def bfs_recursion(
     is_path_pruning = not is_node_pruning
     match_random_ports = config[ConfigKeys.EXP_PARAM.value].get(ConfigKeys.MATCH_RANDOM_PORTS.value, False)
 
-    # Check if node must be processed
-    must_process_flow = (
-        # Node pruning
-        ( is_node_pruning and
-          flow is not None and
-          not tree_contains_flow(flow, tree, match_random_ports) )
-        or
-        # Path pruning
-        ( is_path_pruning and
-          flows and
-          not list_contains_path_flows(paths_flows_processed, flows, match_random_ports) )
-    )
+    if not is_root:
 
-    if must_process_flow:
-        # Mark flow and flow path as processed
-        paths_flows_processed.append(flows)
-    else:
-        # Skip flow, continue recursion at next policy
-        logger.info(f"Skipping flow {flows} at depth {depth} ({heuristic})")
-        bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
-        return
+        # Check if node must be processed
+        must_process_flow = (
+            # Node pruning
+            ( is_node_pruning and
+            flow is not None and
+            not tree_contains_flow(flow, tree, match_random_ports) )
+            or
+            # Path pruning
+            ( is_path_pruning and
+            flows and
+            not list_contains_path_flows(paths_flows_processed, flows, match_random_ports) )
+        )
+
+        if must_process_flow:
+            # Mark flow and flow path as processed
+            paths_flows_processed.append(flows)
+        else:
+            # Skip flow, continue recursion at next policy
+            logger.info(f"Skipping flow {flows} at depth {depth} ({heuristic})")
+            bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+            return
 
     policy_dir = os.path.join(event_dir, node.identifier)
     os.makedirs(policy_dir, exist_ok=True)
@@ -333,7 +336,6 @@ def bfs_recursion(
     if flows:
 
         # Derive firewall config
-        device_name = os.path.basename(args.device_dir)
         device_data = {
             "name": device_name,
             "mac":  device_mac,
@@ -531,7 +533,7 @@ def bfs_recursion(
             local_pcap_path_device = os.path.join(traces_dir, pcap_basename)
             if other_hosts:
                 local_pcap_path_device = local_pcap_path_device.replace(".pcap", "-device.pcap")
-            logger.info(f"Local PCAP path: {local_pcap_path_device}")
+            logger.debug(f"Local PCAP path: {local_pcap_path_device}")
 
             # Device traffic
             try:
@@ -543,7 +545,7 @@ def bfs_recursion(
             # Other hosts' traffic
             if not has_exception and other_hosts:
                 router_pcap_path_others = router_pcap_path.replace(".pcap", "-*.pcap")
-                logger.info(f"Router PCAP path for other hosts: {router_pcap_path_others}")
+                logger.debug(f"Router PCAP path for other hosts: {router_pcap_path_others}")
                 try:
                     copy_from_remote(ap_hostname, router_pcap_path_others, traces_dir)
                 except Exception as e:
@@ -554,9 +556,9 @@ def bfs_recursion(
                     # Merge device and other hosts' PCAPs
                     local_pcap_path = local_pcap_path_device.replace("-device.pcap", ".pcap")
                     pcaps_to_merge = glob.glob(local_pcap_path_device.replace("-device.pcap", "*.pcap"))
-                    logger.info(f"PCAPs to merge: {pcaps_to_merge}")
-                    logger.info(f"Output PCAP: {local_pcap_path}")
-                    cmd = f"mergecap -w \"{local_pcap_path}\" {" ".join(pcaps_to_merge)}"
+                    logger.debug(f"PCAPs to merge: {pcaps_to_merge}")
+                    logger.debug(f"Output PCAP: {local_pcap_path}")
+                    cmd = f"mergecap -w {local_pcap_path} {" ".join(pcaps_to_merge)}"
                     try:
                         subprocess.run(cmd.split(), check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
                     except subprocess.CalledProcessError as e:
@@ -717,8 +719,9 @@ def main() -> None:
         
 
     device_name = device_metadata[ConfigKeys.NAME.value]
+    heuristic = "node_pruning" if config.get(ConfigKeys.EXP_PARAM.value, {}).get(ConfigKeys.NODE_PRUNING.value, False) else "path_pruning"
     event = device_metadata[ConfigKeys.EVENT.value]
-    event_dir = os.path.join(args.device_dir, event)
+    event_dir = os.path.join(args.device_dir, heuristic, event)
 
     if event == "boot":
         try:
@@ -735,6 +738,7 @@ def main() -> None:
     # If device directory is not provided, create a new one
     if args.device_dir is None:
         args.device_dir = os.path.join(os.getcwd(), device_name)
+    args.device_dir = os.path.abspath(args.device_dir)
     os.makedirs(args.device_dir, exist_ok=True)
 
     # Logger config
@@ -822,8 +826,6 @@ def main() -> None:
 
 
     ## Start recursion
-    device_metadata = config[ConfigKeys.DEVICE.value]
-    device_name = os.path.basename(args.device_dir)
     device = init_device(
         device_name,
         device_ipv4,

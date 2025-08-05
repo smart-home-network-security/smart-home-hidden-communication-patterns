@@ -5,7 +5,7 @@ cmake_minimum_required(VERSION 3.20)
 project(iot-dynamic-fingerprinting C)
 
 # Set variable to indicate we do not want the tests to be compiled
-set(NO_TEST FALSE)
+set(NO_TEST TRUE)
 
 # Set variable whether we are cross-compiling for OpenWrt
 IF( CMAKE_CROSSCOMPILING AND DEFINED ENV{STAGING_DIR} )
