@@ -13,5 +13,8 @@ bin
 # Data folders
 data
 
+# Config files
+config.yaml
+
 # Local test scripts
 test.py
