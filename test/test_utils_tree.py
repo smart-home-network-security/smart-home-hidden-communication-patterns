@@ -8,6 +8,7 @@ import sys
 from pathlib import Path
 import json
 from treelib import Tree
+from signature_extraction import FlowFingerprint
 import pytest
 
 # Paths
@@ -19,6 +20,34 @@ import utils.tree as tree_utils
 
 
 ### TEST VARIABLES ###
+
+policy_a = {
+    "bidirectional": True,
+    "protocols": {
+        "ipv4": {
+            "src": "self",
+            "dst": "192.168.1.110"
+        },
+        "tcp": {
+            "dst-port": 9999
+        }
+    }
+}
+flow_a = FlowFingerprint.from_policy(policy_a)
+
+policy_b = {
+    "bidirectional": True,
+    "protocols": {
+        "ipv4": {
+            "src": "192.168.1.110",
+            "dst": "self"
+        },
+        "tcp": {
+            "dst-port": 9999
+        }
+    }
+}
+flow_b = FlowFingerprint.from_policy(policy_b)
 
 tree_data = {
     "root": {
@@ -45,6 +74,12 @@ tree_data_with_last = {
         ]
     }
 }
+
+# Tree with FlowFingerprint objects
+tree_flows = Tree()
+tree_flows.create_node("0_root", "0_root", data={"depth": 0, "flows": []})
+tree_flows.create_node("1_flow_a", "1_flow_a", parent="0_root", data={"depth": 1, "flows": [flow_a]})
+tree_flows.create_node("2_flow_b", "2_flow_b", parent="1_flow_a", data={"depth": 2, "flows": [flow_a, flow_b]})
 
 
 def test_init_empty_tree() -> None:
@@ -98,6 +133,32 @@ def test_load_from_json() -> None:
     assert tree.get_node("node1.2").data == "node1.2"
     assert tree.get_node("node2") is not None
     assert tree.get_node("node2").data == "node2"
+
+
+def test_get_node_depth() -> None:
+    """
+    Unit test for the function `get_node_depth`,
+    which gets the depth of a node in a tree.
+    """
+    node_root = tree_flows.get_node("0_root")
+    assert tree_utils.get_node_depth(node_root) == 0
+    node_a = tree_flows.get_node("1_flow_a")
+    assert tree_utils.get_node_depth(node_a) == 1
+    node_b = tree_flows.get_node("2_flow_b")
+    assert tree_utils.get_node_depth(node_b) == 2
+
+
+def test_get_node_flows() -> None:
+    """
+    Unit test for the function `get_node_flows`,
+    which gets the flows of a node in a tree.
+    """
+    node_root = tree_flows.get_node("0_root")
+    assert tree_utils.get_node_flows(node_root) == []
+    node_a = tree_flows.get_node("1_flow_a")
+    assert tree_utils.get_node_flows(node_a) == [flow_a]
+    node_b = tree_flows.get_node("2_flow_b")
+    assert tree_utils.get_node_flows(node_b) == [flow_a, flow_b]
 
 
 def test_save_to_txt(tmp_path: Path) -> None:

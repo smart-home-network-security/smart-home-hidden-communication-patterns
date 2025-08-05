@@ -6,7 +6,7 @@ from typing import Any
 import os
 import json
 from ipaddress import IPv4Address
-from treelib import Tree
+from treelib import Tree, Node
 from signature_extraction.network import FlowFingerprint
 
 import logging
@@ -17,7 +17,7 @@ logger = logging.getLogger(logger_name)
 class CustomJsonEncoder(json.JSONEncoder):
     """
     Custom JSON encoder to handle the serialization of objects contained in the tree,
-    i.e. FlowFingerprint object.
+    i.e. FlowFingerprint objects.
     """
 
     def __init__(self, ipv4: IPv4Address, *args, **kwargs) -> None:
@@ -122,6 +122,36 @@ def load_from_json(tree_file_path: str, to_flows: bool = False) -> Tree:
     
     # Create tree structure
     return build_tree(Tree(), tree_json, to_flows=to_flows)
+
+
+def get_node_depth(node: Node) -> int:
+    """
+    Get a tree node's depth.
+
+    Args:
+        node (treelib.Node): given node
+    Returns:
+        int: Depth of the node.
+    """
+    if isinstance(node.data, tuple) or isinstance(node.data, list):
+        return node.data[0]
+    elif isinstance(node.data, dict):
+        return node.data.get("depth", 0)
+
+
+def get_node_flows(node: Node) -> list:
+    """
+    Get a tree node's list of flows.
+
+    Args:
+        node (treelib.Node): given node
+    Returns:
+        list: list of flows associated with the node.
+    """
+    if isinstance(node.data, tuple) or isinstance(node.data, list):
+        return node.data[1]
+    elif isinstance(node.data, dict):
+        return node.data.get("flows", [])
 
 
 def display_tree(tree: Tree, id_highlight: str = None) -> None:
