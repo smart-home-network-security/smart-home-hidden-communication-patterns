@@ -1,39 +1,7 @@
 from typing import Union, Tuple, Iterator
 from treelib import Tree, Node
 from signature_extraction.network import FlowFingerprint
-
-
-##### UTILS #####
-
-def get_node_depth(node: Node) -> int:
-    """
-    Get a tree node's depth.
-
-    Args:
-        node (treelib.Node): given node
-    Returns:
-        int: Depth of the node.
-    """
-    if isinstance(node.data, tuple) or isinstance(node.data, list):
-        return node.data[0]
-    elif isinstance(node.data, dict):
-        return node.data.get("depth", 0)
-
-
-def get_node_flows(node: Node) -> list:
-    """
-    Get a tree node's list of flows.
-
-    Args:
-        node (treelib.Node): given node
-    Returns:
-        list: list of flows associated with the node.
-    """
-    if isinstance(node.data, tuple) or isinstance(node.data, list):
-        return node.data[1]
-    elif isinstance(node.data, dict):
-        return node.data.get("flows", [])
-
+from utils.tree import get_node_flows
 
 
 ##### POLICIES (DICTS) #####
@@ -156,13 +124,13 @@ def contains_policy(policies: Iterator[Union[Tuple[str, dict], dict]], policy: d
     return False
 
 
-def tree_contains_policy(policy: Union[Tuple[str, dict], dict], tree: Tree) -> bool:
+def tree_contains_policy(tree: Tree, policy: Union[Tuple[str, dict], dict]) -> bool:
     """
     Check if a given policy is already present in the tree.
 
     Args:
-        policy (Union[Tuple[str, dict], dict]): policy to check
         tree (treelib.Tree): tree structure to search in
+        policy (Union[Tuple[str, dict], dict]): policy to check
     Returns:
         bool: True if policy is present in the tree, False otherwise
     """
@@ -197,6 +165,7 @@ def compare_list_policies(list_policies_a: list, list_policies_b: list) -> bool:
     
     # Check if all policies in list_a are equivalent to policies in list_b
     for policy_a in list_policies_a:
+        print(policy_a)
         if not contains_policy(list_policies_b, policy_a):
             return False
     
@@ -225,16 +194,16 @@ def contains_list_policies(list_of_list_policies: list, policies: list) -> bool:
 
 
 def list_contains_flow(
-        flow: FlowFingerprint,
         list_flows: list[FlowFingerprint],
+        flow: FlowFingerprint,
         match_random_ports: bool = False
     ) -> bool:
     """
     Check if a given FlowFingerprint is present in the list of FlowFingerprints.
 
     Args:
-        flow (FlowFingerprint): FlowFingerprint to search for
         list_flows (list[FlowFingerprint]): list of FlowFingerprints to search in
+        flow (FlowFingerprint): FlowFingerprint to search for
         match_random_ports (bool): Whether to consider random ports in flow matching.
                                    Optional, default is False.
     Returns:
@@ -248,26 +217,26 @@ def list_contains_flow(
 
 
 def path_contains_flow(
-        flow: FlowFingerprint,
         node: Node,
+        flow: FlowFingerprint,
         match_random_ports: bool = False
     ) -> bool:
     """
     Check if a given FlowFingerprint is present in the path from the given node to the tree root.
 
     Args:
-        flow (FlowFingerprint): FlowFingerprint to search for
         node (treelib.Node): node to start searching from
+        flow (FlowFingerprint): FlowFingerprint to search for
         match_random_ports (bool): Whether to consider random ports in flow matching.
                                    Optional, default is False.
     Returns:
         bool: True if FlowFingerprint is present in the path, False otherwise
     """
     path = get_node_flows(node)[:-1]  # Get the list of flows from the node, excluding the node itself
-    return list_contains_flow(flow, path, match_random_ports)
+    return list_contains_flow(path, flow, match_random_ports)
 
 
-def tree_contains_flow(flow: FlowFingerprint, tree: Tree, match_random_ports: bool = False) -> bool:
+def tree_contains_flow(tree: Tree, flow: FlowFingerprint, match_random_ports: bool = False) -> bool:
     """
     Check if a given FlowFingerprint is already present in the tree.
 
@@ -312,7 +281,7 @@ def compare_list_flows(
     
     # Check if all FlowFingerprints in list_a are equivalent to FlowFingerprints in list_b
     for flow_a in list_flows_a:
-        if not flow_a.match_flow(list_flows_b, match_random_ports):
+        if not list_contains_flow(list_flows_b, flow_a, match_random_ports):
             return False
     
     return True

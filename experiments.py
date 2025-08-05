@@ -25,7 +25,7 @@ from signature_extraction.event_signature_extraction import pcaps_to_signature_p
 from signature_extraction.network.FlowFingerprint import FlowFingerprint
 from smart_home_testbed import init_device, close_device
 import utils.tree as tree_utils
-from utils.heuristic import get_node_depth, get_node_flows, list_contains_flow, tree_contains_flow, list_contains_path_flows
+from utils.heuristic import list_contains_flow, tree_contains_flow, list_contains_path_flows
 from utils.power_cycle import Plug
 
 
@@ -286,8 +286,8 @@ def bfs_recursion(
     # Get next node to process
     policy_name = queue.popleft()
     node = tree.get_node(policy_name)
-    depth = get_node_depth(node)
-    flows = get_node_flows(node)
+    depth = tree_utils.get_node_depth(node)
+    flows = tree_utils.get_node_flows(node)
     flow = flows[-1] if len(flows) > 0 else None
 
     # Get experimental parameters
