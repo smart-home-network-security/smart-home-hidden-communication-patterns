@@ -303,7 +303,7 @@ def bfs_recursion(
             # Node pruning
             ( is_node_pruning and
             flow is not None and
-            not tree_contains_flow(flow, tree, match_random_ports) )
+            not tree_contains_flow(tree, flow, match_random_ports) )
             or
             # Path pruning
             ( is_path_pruning and
@@ -646,7 +646,7 @@ def bfs_recursion(
         tree.create_node(next_flow_name, next_flow_name, data=data_new, parent=node.identifier)
 
         # If needed, add flow to queue
-        if not list_contains_flow(flow_new, flows, match_random_ports):
+        if not list_contains_flow(flows, flow_new, match_random_ports):
             last_node = (next_flow_name, flow_new)
             queue.append(next_flow_name)
     

@@ -1,10 +1,17 @@
-# Skip all experimental output files
+# Ignore all experimental output files
 *.txt
 *.log
 *.nft
 *.c
 *.csv
+*.json
+
+# Track event signature trees (in JSON format)
+!tree*.json
 
 # Ignore PCAP files, except the explicitly anonymized ones
 *.pcap
 !*.anon.pcap
+
+# Ignore folders of old experiments
+old/
