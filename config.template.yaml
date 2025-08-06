@@ -18,10 +18,22 @@ access-point:
 
 # Experimental parameters
 exp-param:
+  node-pruning: true
+  match-random-ports: false
   n-events: 20
   pcap-timeout: 20
   wait-low: 40
   wait-high: 150
+
+# For boot events:
+# Controllable plugs' metadata
+boot-plugs:
+  TpLinkPlug:
+    ipv4: 192.168.1.10
+  TapoPlug:
+    username: username
+    password: password
+    ipv4: 192.168.1.11
 
 # Other hosts to capture packets from
 other-hosts:
