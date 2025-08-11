@@ -15,3 +15,6 @@
 
 # Ignore folders of old experiments
 old/
+
+# Ignore path-pruning data (for now)
+path_pruning/
