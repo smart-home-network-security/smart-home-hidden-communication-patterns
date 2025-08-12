@@ -6,12 +6,12 @@
 __pycache__
 .pytest_cache
 
+# Temp files
+*.swp
+
 # Build folders
 build
 bin
-
-# Data folders
-data
 
 # Config files
 config.yaml
