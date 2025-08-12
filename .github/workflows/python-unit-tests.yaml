@@ -10,6 +10,16 @@ jobs:
     
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          submodules: false
+      
+      - name: Sparse checkout
+        run: |
+          git sparse-checkout init
+          echo "/*" >> .git/info/sparse-checkout
+          echo "!/data/" >> .git/info/sparse-checkout
+          git read-tree -mu HEAD
 
       - name: Install Python packages
         run: pip3 install -r requirements.txt

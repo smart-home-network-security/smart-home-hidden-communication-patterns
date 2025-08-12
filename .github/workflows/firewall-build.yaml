@@ -11,7 +11,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 0
+          submodules: false
+
+      - name: Sparse checkout
+        run: |
+          git sparse-checkout init
+          echo "/*" >> .git/info/sparse-checkout
+          echo "!/data/" >> .git/info/sparse-checkout
+          git read-tree -mu HEAD
+
+      - name: Fetch submodule firewall
+        run: |
+          git submodule init firewall
+          git submodule update --recursive firewall
       
       - name: Install packages
         run: sudo .ci_scripts/firewall-test/install_packages.sh
@@ -39,7 +52,20 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 0
+          submodules: false
+
+      - name: Sparse checkout
+        run: |
+          git sparse-checkout init
+          echo "/*" >> .git/info/sparse-checkout
+          echo "!/data/" >> .git/info/sparse-checkout
+          git read-tree -mu HEAD
+
+      - name: Fetch submodule firewall
+        run: |
+          git submodule init firewall
+          git submodule update --recursive firewall
 
       - name: Run cross-compilation
         run: docker compose run --rm --remove-orphans cross-compilation /home/user/iot-firewall/docker_cmd.sh tl-wdr4900 $(id -u $(whoami)) $(id -g $(whoami))

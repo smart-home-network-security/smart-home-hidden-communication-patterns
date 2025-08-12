@@ -1,5 +1,5 @@
 variables:
-  GIT_SUBMODULE_STRATEGY: recursive
+  GIT_SUBMODULE_STRATEGY: none
 
 
 job-unit-tests:
@@ -13,6 +13,8 @@ job-unit-tests:
 
 job-firewall-test:
   script:
+    - git submodule init firewall
+    - git submodule update --recursive firewall
     - sudo .ci_scripts/firewall-test/install_packages.sh
     - ./build.sh
     - .ci_scripts/firewall-test/run_tests.sh
