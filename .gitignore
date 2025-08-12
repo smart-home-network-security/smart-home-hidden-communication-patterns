@@ -13,9 +13,6 @@ __pycache__
 build
 bin
 
-# Data folders
-data
-
 # Config files
 config.yaml
 

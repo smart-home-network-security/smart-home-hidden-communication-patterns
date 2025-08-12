@@ -1,0 +1,2593 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-euw1-api.tplinkra.com_1741769667": {
+          "children": [
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-devs.tplinkcloud.com_1741777850": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "euw1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-devs.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "euw1-api.tplinkra.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-devs.tplinkcloud.com_1741769667": {
+          "children": [
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-devs.tplinkcloud.com_1741772417": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-devs.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-devs.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "n-devs.tplinkcloud.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.135-euw1-api.tplinkra.com_TCP_dst_443_1741769667": {
+          "children": [
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-devs.tplinkcloud.com_1741780619": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "euw1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-devs.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "euw1-api.tplinkra.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ],
+          "last": true
+        }
+      },
+      {
+        "1_n-devs.tplinkcloud.com-192.168.1.135_TCP_src_443_1741769667": {
+          "children": [
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-devs.tplinkcloud.com_1741775101": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "n-devs.tplinkcloud.com",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-devs.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "n-devs.tplinkcloud.com",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "src-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.110-192.168.1.135_TCP_dst_9999_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-224.0.0.251_UDP_dst_5353_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-n-wap.tplinkcloud.com_TCP_dst_443_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "n-wap.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.110_UDP_src_9999_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732179235": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_79.125.56.92-192.168.1.135_TCP_src_443_1732179235": {
+                "children": [
+                  {
+                    "3_192.168.1.110-224.0.0.251_UDP_dst_5353_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "dst-port": 5353
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-n-wap.tplinkcloud.com_TCP_dst_443_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "n-wap.tplinkcloud.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.135-192.168.1.110_UDP_src_9999_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.110"
+                              },
+                              "udp": {
+                                "src-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "use1-api.tplinkra.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_34.240.186.173-192.168.1.135_TCP_src_443_1732196875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "79.125.56.92",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "79.125.56.92",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "dst-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.110-224.0.0.251_UDP_dst_5353_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.135_TCP_dst_9999_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-224.0.0.251_UDP_dst_5353_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.110_UDP_src_9999_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732189181": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "224.0.0.251"
+                  },
+                  "udp": {
+                    "dst-port": 5353
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-224.0.0.251_UDP_dst_5353_1732187213": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732187213": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732187213": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-n-wap.tplinkcloud.com_TCP_dst_443_1732187213": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "n-wap.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732187213": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732187213": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_34.240.186.173-192.168.1.135_TCP_src_443_1732187213": {
+                "children": [
+                  {
+                    "3_192.168.1.110-224.0.0.251_UDP_dst_5353_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "dst-port": 5353
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.110-n-wap.tplinkcloud.com_TCP_dst_443_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "n-wap.tplinkcloud.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "use1-api.tplinkra.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "use1-api.tplinkra.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_n-devs.tplinkcloud.com-192.168.1.135_TCP_src_443_1732198875": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.110",
+                                "dst": "255.255.255.255"
+                              },
+                              "udp": {
+                                "dst-port": 9999
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "34.240.186.173",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "n-devs.tplinkcloud.com",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ],
+                      "last": true
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "34.240.186.173",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "255.255.255.255"
+                  },
+                  "udp": {
+                    "dst-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.135_TCP_dst_9999_1732185309": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732185309": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732185309": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.110",
+                    "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.135-192.168.1.110_UDP_src_9999_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-224.0.0.251_UDP_dst_5353_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-n-wap.tplinkcloud.com_TCP_dst_443_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "n-wap.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.110_UDP_src_9999_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_34.240.186.173-192.168.1.135_TCP_src_443_1732193077": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "34.240.186.173",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.110"
+                  },
+                  "udp": {
+                    "src-port": 9999
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.135_TCP_dst_9999_1732181172": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-224.0.0.251_UDP_dst_5353_1732181172": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732181172": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732181172": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.110_UDP_src_9999_1732181172": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-use1-api.tplinkra.com_1732181172": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "use1-api.tplinkra.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "use1-api.tplinkra.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.135-use1-api.tplinkra.com_TCP_dst_443_1732177288": {
+          "children": [
+            {
+              "2_192.168.1.110-192.168.1.135_TCP_dst_9999_1732183192": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-224.0.0.251_UDP_dst_5353_1732183192": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "dst-port": 5353
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-255.255.255.255_UDP_dst_20002_dst_9999_1732183192": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "255.255.255.255"
+                        },
+                        "udp": {
+                          "dst-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.110-euw1-device-telemetry-gw.iot.i.tplinknbu.com_TCP_dst_443_1732183192": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.110",
+                          "dst": "euw1-device-telemetry-gw.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.135-192.168.1.110_UDP_src_9999_1732183192": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "use1-api.tplinkra.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.110"
+                        },
+                        "udp": {
+                          "src-port": 9999
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "use1-api.tplinkra.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}

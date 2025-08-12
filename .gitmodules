@@ -1,3 +1,6 @@
 [submodule "firewall"]
 	path = firewall
 	url = git@github.com:smart-home-network-security/firewall-blocklist.git
+[submodule "data/pcap"]
+	path = data/pcap
+	url = git@github.com:smart-home-network-security/pcaps-smart-home.git

@@ -1,0 +1,2513 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-aps1-openapi.i.tplinknbu.com_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741887558": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "aps1-openapi.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741887558": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "aps1-openapi.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741887558": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "aps1-openapi.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "time.nist.gov"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "aps1-openapi.i.tplinknbu.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-euw1-device-api.tplinkcloud.com_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741882125": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-euw1-device-api.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741882125": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-euw1-device-api.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741882125": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-euw1-device-api.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "time.nist.gov"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "n-euw1-device-api.tplinkcloud.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741871151": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741871151": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741871151": {
+                "children": [
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741890332": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741890332": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "security.iot.i.tplinknbu.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741890332": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "time.nist.gov"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "pool.ntp.org"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741873880": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741873880": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741873880": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "time.nist.gov"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "192.168.1.1"
+                  },
+                  "udp": {
+                    "dst-port": 53
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "A",
+                    "domain-name": "security.iot.i.tplinknbu.com"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.134-n-euw1-device-api.tplinkcloud.com_TCP_dst_443_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-aps1-openapi.i.tplinknbu.com_1741884809": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "aps1-openapi.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-euw1-device-api.tplinkcloud.com_1741884809": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-euw1-device-api.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741884809": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741884809": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-pool.ntp.org_UDP_dst_123_src_62510_1741884809": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-security.iot.i.tplinknbu.com_TCP_dst_443_1741884809": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "security.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "n-euw1-device-api.tplinkcloud.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.134-pool.ntp.org_UDP_dst_123_src_62510_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-aps1-openapi.i.tplinknbu.com_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "aps1-openapi.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-n-euw1-device-api.tplinkcloud.com_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "n-euw1-device-api.tplinkcloud.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "pool.ntp.org"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "security.iot.i.tplinknbu.com"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "192.168.1.1"
+                        },
+                        "udp": {
+                          "dst-port": 53
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "A",
+                          "domain-name": "time.nist.gov"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-aps1-openapi.i.tplinknbu.com_TCP_dst_443_1741876611": {
+                "children": [
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741903924": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "aps1-openapi.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741903924": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "aps1-openapi.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "security.iot.i.tplinknbu.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741903924": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "aps1-openapi.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-pool.ntp.org_UDP_dst_123_1741903924": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "aps1-openapi.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-time.nist.gov_UDP_dst_123_src_62510_1741903924": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "aps1-openapi.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "aps1-openapi.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-euw1-security.iot.i.tplinknbu.com_TCP_dst_443_1741876611": {
+                "children": [
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741895818": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "euw1-security.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741895818": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "euw1-security.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "security.iot.i.tplinknbu.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741895818": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "euw1-security.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-pool.ntp.org_UDP_dst_123_1741895818": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "euw1-security.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "euw1-security.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-n-euw1-device-api.tplinkcloud.com_TCP_dst_443_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "n-euw1-device-api.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-pool.ntp.org_UDP_dst_123_src_62510_1741876611": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            },
+            {
+              "2_192.168.1.134-time.nist.gov_UDP_dst_123_src_62510_1741876611": {
+                "children": [
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741898542": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "pool.ntp.org"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741898542": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "security.iot.i.tplinknbu.com"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741898542": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "192.168.1.1"
+                              },
+                              "udp": {
+                                "dst-port": 53
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "A",
+                                "domain-name": "time.nist.gov"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-pool.ntp.org_UDP_dst_123_1741898542": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_192.168.1.134-time.nist.gov_UDP_dst_123_src_62510_1741898542": {
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ]
+                    }
+                  },
+                  {
+                    "3_euw1-device-cloudgateway-backup.iot.i.tplinknbu.com-192.168.1.134_TCP_src_443_1741898542": {
+                      "children": [
+                        {
+                          "4_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-pool.ntp.org_1741906696": {
+                            "data": [
+                              4,
+                              [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "pool.ntp.org"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "time.nist.gov"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "euw1-device-cloudgateway-backup.iot.i.tplinknbu.com",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "src-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "192.168.1.1"
+                                    },
+                                    "udp": {
+                                      "dst-port": 53
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "A",
+                                      "domain-name": "pool.ntp.org"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        {
+                          "4_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-security.iot.i.tplinknbu.com_1741906696": {
+                            "data": [
+                              4,
+                              [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "pool.ntp.org"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "time.nist.gov"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "euw1-device-cloudgateway-backup.iot.i.tplinknbu.com",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "src-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "192.168.1.1"
+                                    },
+                                    "udp": {
+                                      "dst-port": 53
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "A",
+                                      "domain-name": "security.iot.i.tplinknbu.com"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        {
+                          "4_192.168.1.134-192.168.1.1_UDP_dst_53_DNS_response-False_qtype-A_domain-name-time.nist.gov_1741906696": {
+                            "data": [
+                              4,
+                              [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "pool.ntp.org"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "time.nist.gov"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "euw1-device-cloudgateway-backup.iot.i.tplinknbu.com",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "src-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "192.168.1.1"
+                                    },
+                                    "udp": {
+                                      "dst-port": 53
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "A",
+                                      "domain-name": "time.nist.gov"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            ]
+                          }
+                        },
+                        {
+                          "4_192.168.1.134-pool.ntp.org_UDP_dst_123_1741906696": {
+                            "data": [
+                              4,
+                              [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "pool.ntp.org"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "time.nist.gov"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123,
+                                      "src-port": 62510
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "euw1-device-cloudgateway-backup.iot.i.tplinknbu.com",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "src-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "pool.ntp.org"
+                                    },
+                                    "udp": {
+                                      "dst-port": 123
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            ]
+                          }
+                        }
+                      ],
+                      "data": [
+                        3,
+                        [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "pool.ntp.org"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "time.nist.gov"
+                              },
+                              "udp": {
+                                "dst-port": 123,
+                                "src-port": 62510
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "euw1-device-cloudgateway-backup.iot.i.tplinknbu.com",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      ],
+                      "last": true
+                    }
+                  }
+                ],
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "time.nist.gov"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "pool.ntp.org"
+                  },
+                  "udp": {
+                    "dst-port": 123,
+                    "src-port": 62510
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      },
+      {
+        "1_192.168.1.134-security.iot.i.tplinknbu.com_TCP_dst_443_1741868338": {
+          "children": [
+            {
+              "2_192.168.1.134-pool.ntp.org_UDP_dst_123_src_62510_1741879374": {
+                "data": [
+                  2,
+                  [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "security.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "pool.ntp.org"
+                        },
+                        "udp": {
+                          "dst-port": 123,
+                          "src-port": 62510
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                ]
+              }
+            }
+          ],
+          "data": [
+            1,
+            [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "security.iot.i.tplinknbu.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          ]
+        }
+      }
+    ],
+    "data": [
+      0,
+      []
+    ]
+  }
+}
