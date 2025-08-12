@@ -6,7 +6,10 @@
 *.csv
 *.json
 
-# Track event signature trees (in JSON format)
+## Exceptions
+# CMake config
+!CMakeLists.txt
+# Event signature trees (in JSON format)
 !tree*.json
 
 # Ignore PCAP files (they should go in the pcap folder)
