@@ -12,11 +12,12 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: false
-
+      
       - name: Fetch submodule firewall
         run: |
-          git submodule init firewall
-          git submodule update --recursive firewall
+          git config -f .gitmodules submodule.firewall.url https://github.com/smart-home-network-security/firewall-blocklist.git
+          git submodule sync firewall
+          git submodule update --init --recursive firewall
       
       - name: Install packages
         run: sudo .ci_scripts/firewall-test/install_packages.sh
@@ -48,8 +49,9 @@ jobs:
 
       - name: Fetch submodule firewall
         run: |
-          git submodule init firewall
-          git submodule update --recursive firewall
+          git config -f .gitmodules submodule.firewall.url https://github.com/smart-home-network-security/firewall-blocklist.git
+          git submodule sync firewall
+          git submodule update --init --recursive firewall
 
       - name: Run cross-compilation
         run: docker compose run --rm --remove-orphans cross-compilation /home/user/iot-firewall/docker_cmd.sh tl-wdr4900 $(id -u $(whoami)) $(id -g $(whoami))
