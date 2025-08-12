@@ -14,13 +14,6 @@ jobs:
           fetch-depth: 0
           submodules: false
 
-      - name: Sparse checkout
-        run: |
-          git sparse-checkout init
-          echo "*" >> .git/info/sparse-checkout
-          echo "!data/" >> .git/info/sparse-checkout
-          git read-tree -mu HEAD
-
       - name: Fetch submodule firewall
         run: |
           git submodule init firewall
@@ -54,13 +47,6 @@ jobs:
         with:
           fetch-depth: 0
           submodules: false
-
-      - name: Sparse checkout
-        run: |
-          git sparse-checkout init
-          echo "*" >> .git/info/sparse-checkout
-          echo "!data/" >> .git/info/sparse-checkout
-          git read-tree -mu HEAD
 
       - name: Fetch submodule firewall
         run: |
