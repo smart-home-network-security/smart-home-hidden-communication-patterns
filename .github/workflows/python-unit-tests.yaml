@@ -17,8 +17,8 @@ jobs:
       - name: Sparse checkout
         run: |
           git sparse-checkout init
-          echo "/*" >> .git/info/sparse-checkout
-          echo "!/data/" >> .git/info/sparse-checkout
+          echo "*" >> .git/info/sparse-checkout
+          echo "!data/" >> .git/info/sparse-checkout
           git read-tree -mu HEAD
 
       - name: Install Python packages
