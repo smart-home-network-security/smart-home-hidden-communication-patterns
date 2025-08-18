@@ -14,6 +14,8 @@ build
 bin
 
 # Config files
+devices
+!data/devices
 config.yaml
 
 # Local test scripts

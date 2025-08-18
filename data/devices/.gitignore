@@ -15,5 +15,8 @@
 # Ignore PCAP files (they should go in the pcap folder)
 *.pcap
 
+# Do not track path-pruning files (for now)
+path_pruning/
+
 # Ignore folders of old experiments
 old/
