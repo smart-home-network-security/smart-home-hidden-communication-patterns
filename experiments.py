@@ -88,6 +88,9 @@ class ConfigKeys(Enum):
     # Hosts to filter out from the packet capture
     FILTER_HOSTS = "filter-hosts"
 
+    # Timestamp
+    TIMESTAMP_START = "timestamp_start"
+
 
 
 ##### INITIAL SETUP #####
@@ -280,7 +283,8 @@ def bfs_recursion(
     boot_plugs = config[ConfigKeys.BOOT_PLUGS.value] if event == "boot" else {}
 
     # Save intermediate tree
-    basename = os.path.join(event_dir, "tree")
+    timestamp = config.get(ConfigKeys.TIMESTAMP_START, time.time_ns())
+    basename = f"{os.path.join(event_dir, 'tree')}_{timestamp}"
     tree_utils.save_trees(tree, basename, device_ipv4)
 
     # Get next node to process
@@ -462,7 +466,7 @@ def bfs_recursion(
                 continue
         
         # Append timestamp
-        timestamp = int(time.time())
+        timestamp = time.time_ns()
         with open(event_timestamps_file, "a") as f:
             f.write(f"{timestamp}\n")
 
@@ -741,6 +745,9 @@ def main() -> None:
     args.device_dir = os.path.abspath(args.device_dir)
     os.makedirs(args.device_dir, exist_ok=True)
 
+    # Add experiment start timestamp to config
+    config[ConfigKeys.TIMESTAMP_START] = time.time_ns()
+
     # Logger config
     log_file = os.path.join(event_dir, "experiments.log") if args.log is None else args.log
     log_dir = os.path.dirname(log_file)
@@ -859,12 +866,13 @@ def main() -> None:
         tree_utils.display_tree(tree)
         
         ### Save recursion data
+        timestamp = config.get(ConfigKeys.TIMESTAMP_START, time.time_ns())
         ## Tree
-        basename = os.path.join(event_dir, "tree")
+        basename = f"{os.path.join(event_dir, 'tree')}_{timestamp}"
         last_node_name = last_node[0] if last_node else None
         tree_utils.save_trees(tree, basename, device_ipv4, last_node_name)
         ## Queue
-        queue_path = os.path.join(event_dir, "queue.txt")
+        queue_path = f"{os.path.join(event_dir, 'queue.txt')}_{timestamp}"
         with open(queue_path, "w") as f:
             f.write(",".join(queue))
 
