@@ -872,7 +872,7 @@ def main() -> None:
         last_node_name = last_node[0] if last_node else None
         tree_utils.save_trees(tree, basename, device_ipv4, last_node_name)
         ## Queue
-        queue_path = f"{os.path.join(event_dir, 'queue.txt')}_{timestamp}"
+        queue_path = f"{os.path.join(event_dir, 'queue')}_{timestamp}.txt"
         with open(queue_path, "w") as f:
             f.write(",".join(queue))
 
