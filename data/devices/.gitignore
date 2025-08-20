@@ -1,4 +1,5 @@
-# Ignore all experimental output files
+# Ignore all experimental files
+cmd.sh
 *.txt
 *.log
 *.nft

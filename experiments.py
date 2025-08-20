@@ -247,6 +247,7 @@ def bfs_recursion(
         dns_table: dict,
         tree: Tree,
         queue: deque,
+        flows_processed: list[FlowFingerprint],
         paths_flows_processed: list[list[FlowFingerprint]]
     ) -> None:
     """
@@ -260,6 +261,7 @@ def bfs_recursion(
         dns_table (dict): mapping between IP addresses and their related domain name
         tree (treelib.Tree): tree structure
         queue (collections.deque): queue of policies to process
+        flows_processed (list[FlowFingerprint]): list of flows already processed
         paths_flows_processed (list[list[FlowFingerprint]]): list of lists of flows already processed
     """
 
@@ -310,7 +312,7 @@ def bfs_recursion(
             # Node pruning
             ( is_node_pruning and
             flow is not None and
-            not tree_contains_flow(tree, flow, match_random_ports) )
+            not list_contains_flow(flows_processed, flow, match_random_ports) )
             or
             # Path pruning
             ( is_path_pruning and
@@ -320,11 +322,12 @@ def bfs_recursion(
 
         if must_process_flow:
             # Mark flow and flow path as processed
+            flows_processed.append(flow)
             paths_flows_processed.append(flows)
         else:
             # Skip flow, continue recursion at next policy
             logger.info(f"Skipping flow {flows} at depth {depth} ({heuristic})")
-            bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+            bfs_recursion(args, config, device, router, dns_table, tree, queue, flows_processed, paths_flows_processed)
             return
 
     policy_dir = os.path.join(event_dir, node.identifier)
@@ -365,7 +368,7 @@ def bfs_recursion(
         except Exception as e:
             logger.error(e)
             logger.error("Continue recursion at next policy...")
-            bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+            bfs_recursion(args, config, device, router, dns_table, tree, queue, flows_processed, paths_flows_processed)
             return
         
         nfqueue_src_path = os.path.join(policy_dir, NFQUEUE_SRC)
@@ -393,7 +396,7 @@ def bfs_recursion(
             if not os.path.isfile(nfqueue_exec_path):
                 logger.error(f"Cross-compiled nfqueue executable not found at {nfqueue_exec_path}")
                 logger.error("Continue recursion at next policy...")
-                bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+                bfs_recursion(args, config, device, router, dns_table, tree, queue, flows_processed, paths_flows_processed)
                 return
 
             try:
@@ -401,7 +404,7 @@ def bfs_recursion(
             except Exception as e:
                 logger.error(e)
                 logger.error("Continue recursion at next policy...")
-                bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+                bfs_recursion(args, config, device, router, dns_table, tree, queue, flows_processed, paths_flows_processed)
                 return
 
             router.run(f"{ROUTER_NFQUEUE_EXEC} &")
@@ -628,7 +631,7 @@ def bfs_recursion(
             "failed": True
         }
         node.data = data
-        bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+        bfs_recursion(args, config, device, router, dns_table, tree, queue, flows_processed, paths_flows_processed)
         return
 
     # Event iteration was successful
@@ -659,7 +662,7 @@ def bfs_recursion(
     
 
     # Continue recursion
-    bfs_recursion(args, config, device, router, dns_table, tree, queue, paths_flows_processed)
+    bfs_recursion(args, config, device, router, dns_table, tree, queue, flows_processed, paths_flows_processed)
 
 
 
@@ -851,7 +854,7 @@ def main() -> None:
         device.close_app()  # Reset app before starting recursion
 
     try:
-        bfs_recursion(args, config, device, router, dns_table, tree, queue, [])
+        bfs_recursion(args, config, device, router, dns_table, tree, queue, [], [])
     finally:
         # Clean up
         if event != "boot":
