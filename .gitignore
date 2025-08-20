@@ -19,6 +19,7 @@ devices
 config.yaml
 
 # Local test scripts
+script.sh
 test.py
 
 # Ignore path-pruning metrics (for now)

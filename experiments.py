@@ -58,6 +58,9 @@ class ConfigKeys(Enum):
     EVENT  = "event"
     ACCESS_POINT_INTERFACE = "access-point-interface"
 
+    # Device-specific data
+    SPECIFIC = "specific"
+
     # Network gateway
     GATEWAY  = "gateway"
     HOSTNAME = "hostname"
@@ -688,7 +691,7 @@ def main() -> None:
     config = {}
     with open(args.config, "r") as f:
         try:
-            config = yaml.safe_load(f)
+            config: dict = yaml.safe_load(f)
         except yaml.YAMLError:
             logger.error("Could not read config file.")
             exit(-1)
@@ -831,12 +834,12 @@ def main() -> None:
         # initialize empty queue
         queue = deque(["0_root"])
 
-
     ## Start recursion
+    device_specific_data = config.get(ConfigKeys.SPECIFIC.value, {})
     device = init_device(
         device_name,
         device_ipv4,
-        # Add necessary additional arguments here
+        **device_specific_data  # Device-specific keyword arguments
         )
     
     # Set in initial state

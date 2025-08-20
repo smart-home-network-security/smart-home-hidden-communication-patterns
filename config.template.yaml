@@ -6,6 +6,11 @@ device:
   event: toggle
   access-point-interface: wlan1
 
+# Device-specific data
+specific:
+  username: username
+  password: password
+
 # Network gateway
 gateway:
   hostname: gateway
