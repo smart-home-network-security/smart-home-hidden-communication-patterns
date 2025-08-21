@@ -20,7 +20,7 @@ from collections import deque
 # Custom
 from custom_types import mac_address, ip_address
 from dns_unbound_cache_reader import read_dns_cache, update_dns_table
-from profile_translator_blocklist import translate_policies
+from profile_translator_blocklist import slugify_name, translate_policies
 from signature_extraction.event_signature_extraction import pcaps_to_signature_pattern
 from signature_extraction.network.FlowFingerprint import FlowFingerprint
 from smart_home_testbed import init_device, close_device
@@ -352,11 +352,7 @@ def bfs_recursion(
             "ipv4": device_ipv4
         }
         nfqueue_name = f"{device_name}_{node.identifier}"
-
-        # Replace special characters in nfqueue name
-        special_chars = [' ', ':', '#', '.', '/', '*', '?', '=']
-        for char in special_chars:
-            nfqueue_name = nfqueue_name.replace(char, '_')
+        nfqueue_name = slugify_name(nfqueue_name)  # Replace special characters
     
         # Generate firewall config
         policies = [flow.extract_policy(device_ipv4) for flow in flows]
