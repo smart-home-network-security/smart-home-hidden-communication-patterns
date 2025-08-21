@@ -1,0 +1,3340 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.141-34.90.173.67_TCP_dst_443_1748859977": {
+          "children": [
+            {
+              "2_192.168.1.141-api.account.meethue.com_TCP_dst_443_1748870614": {
+                "children": [
+                  {
+                    "3_192.168.1.193-192.168.1.141_TCP_dst_443_1748902609": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "api.account.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748902609": {
+                      "children": [
+                        {
+                          "4_192.168.1.193-192.168.1.141_TCP_dst_443_1748943221": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "api.account.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ],
+                              "failed": true
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hue._tcp.local_1748943221": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "api.account.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hue._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748943221": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "api.account.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "api2.amplitude.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "api.account.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748902609": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "api.account.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "34.90.173.67"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "api.account.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.141-data.meethue.com_TCP_dst_443_1748870614": {
+                "children": [
+                  {
+                    "3_192.168.1.193-192.168.1.141_TCP_dst_443_1748900488": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748900488": {
+                      "children": [
+                        {
+                          "4_192.168.1.193-192.168.1.141_TCP_dst_443_1748938899": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ],
+                              "failed": true
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hue._tcp.local_1748938899": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hue._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748938899": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "api2.amplitude.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-52.25.47.39_TCP_dst_443_1748900488": {
+                      "children": [
+                        {
+                          "4_192.168.1.193-192.168.1.141_TCP_dst_443_1748936737": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "52.25.47.39"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ],
+                              "failed": true
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748936737": {
+                            "children": [
+                              {
+                                "5_192.168.1.193-192.168.1.141_TCP_dst_443_1748954116": {
+                                  "data": {
+                                    "depth": 5,
+                                    "flows": [
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "self",
+                                            "dst": "34.90.173.67"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "self",
+                                            "dst": "data.meethue.com"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "52.25.47.39"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "224.0.0.251"
+                                          },
+                                          "udp": {
+                                            "src-port": 5353,
+                                            "dst-port": 5353
+                                          },
+                                          "dns": {
+                                            "response": false,
+                                            "qtype": "PTR",
+                                            "domain-name": "_hap._tcp.local"
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "self"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      }
+                                    ],
+                                    "failed": true
+                                  }
+                                }
+                              },
+                              {
+                                "5_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748954116": {
+                                  "data": {
+                                    "depth": 5,
+                                    "flows": [
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "self",
+                                            "dst": "34.90.173.67"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "self",
+                                            "dst": "data.meethue.com"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "52.25.47.39"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "224.0.0.251"
+                                          },
+                                          "udp": {
+                                            "src-port": 5353,
+                                            "dst-port": 5353
+                                          },
+                                          "dns": {
+                                            "response": false,
+                                            "qtype": "PTR",
+                                            "domain-name": "_hap._tcp.local"
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "224.0.0.251"
+                                          },
+                                          "udp": {
+                                            "src-port": 5353,
+                                            "dst-port": 5353
+                                          },
+                                          "dns": {
+                                            "response": false,
+                                            "qtype": "PTR",
+                                            "domain-name": "_hap._tcp.local"
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      }
+                                    ]
+                                  }
+                                }
+                              },
+                              {
+                                "5_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748954116": {
+                                  "data": {
+                                    "depth": 5,
+                                    "flows": [
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "self",
+                                            "dst": "34.90.173.67"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "self",
+                                            "dst": "data.meethue.com"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "52.25.47.39"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "224.0.0.251"
+                                          },
+                                          "udp": {
+                                            "src-port": 5353,
+                                            "dst-port": 5353
+                                          },
+                                          "dns": {
+                                            "response": false,
+                                            "qtype": "PTR",
+                                            "domain-name": "_hap._tcp.local"
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      },
+                                      {
+                                        "protocols": {
+                                          "ipv4": {
+                                            "src": "192.168.1.193",
+                                            "dst": "api2.amplitude.com"
+                                          },
+                                          "tcp": {
+                                            "dst-port": 443
+                                          }
+                                        },
+                                        "bidirectional": true
+                                      }
+                                    ]
+                                  },
+                                  "last": true
+                                }
+                              }
+                            ],
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "52.25.47.39"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748936737": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "52.25.47.39"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "api2.amplitude.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "52.25.47.39"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "34.90.173.67"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "data.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-192.168.1.141_TCP_dst_443_1748870614": {
+                "children": [
+                  {
+                    "3_192.168.1.141-data.meethue.com_TCP_dst_443_1748896179": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748896179": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api.meethue.com_TCP_dst_443_1748896179": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748896179": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_api.account.meethue.com-192.168.1.141_TCP_src_443_1748896179": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "api.account.meethue.com",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "34.90.173.67"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748870614": {
+                "children": [
+                  {
+                    "3_192.168.1.141-data.meethue.com_TCP_dst_443_1748904817": {
+                      "children": [
+                        {
+                          "4_192.168.1.193-192.168.1.141_TCP_dst_443_1748949737": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "self"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ],
+                              "failed": true
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748949737": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        },
+                        {
+                          "4_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748949737": {
+                            "data": {
+                              "depth": 4,
+                              "flows": [
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "34.90.173.67"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "224.0.0.251"
+                                    },
+                                    "udp": {
+                                      "src-port": 5353,
+                                      "dst-port": 5353
+                                    },
+                                    "dns": {
+                                      "response": false,
+                                      "qtype": "PTR",
+                                      "domain-name": "_hap._tcp.local"
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "self",
+                                      "dst": "data.meethue.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                },
+                                {
+                                  "protocols": {
+                                    "ipv4": {
+                                      "src": "192.168.1.193",
+                                      "dst": "api2.amplitude.com"
+                                    },
+                                    "tcp": {
+                                      "dst-port": 443
+                                    }
+                                  },
+                                  "bidirectional": true
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ],
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-192.168.1.141_TCP_dst_443_1748904817": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hue._tcp.local_1748904817": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hue._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748904817": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "34.90.173.67"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "34.90.173.67"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748870614": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "34.90.173.67"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "api2.amplitude.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "34.90.173.67"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "1_192.168.1.141-data.meethue.com_TCP_dst_443_1748859977": {
+          "children": [
+            {
+              "2_192.168.1.193-192.168.1.141_TCP_dst_443_1748866340": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "data.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748866340": {
+                "children": [
+                  {
+                    "3_192.168.1.193-192.168.1.141_TCP_dst_443_1748885586": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hue._tcp.local_1748885586": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hue._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748885586": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "data.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748866340": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "data.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "api2.amplitude.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "data.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "1_192.168.1.193-192.168.1.141_TCP_dst_443_1748859977": {
+          "children": [
+            {
+              "2_192.168.1.141-mqtt-eu-01.iot.meethue.com_TCP_dst_443_1748862063": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "mqtt-eu-01.iot.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748862063": {
+                "children": [
+                  {
+                    "3_192.168.1.141-data.meethue.com_TCP_dst_443_1748879206": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.141-mqtt-eu-01.iot.meethue.com_TCP_dst_443_1748879206": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "mqtt-eu-01.iot.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748879206": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api.meethue.com_TCP_dst_443_1748879206": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748879206": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_api.account.meethue.com-192.168.1.141_TCP_src_443_1748879206": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "api.account.meethue.com",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-api.meethue.com_TCP_dst_443_1748862063": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "api.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748862063": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "api2.amplitude.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_ws.meethue.com-192.168.1.141_TCP_src_443_1748862063": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "ws.meethue.com",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "1_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748859977": {
+          "children": [
+            {
+              "2_192.168.1.141-data.meethue.com_TCP_dst_443_1748868476": {
+                "children": [
+                  {
+                    "3_192.168.1.193-192.168.1.141_TCP_dst_443_1748891911": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748891911": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748891911": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "data.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "data.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.141-mqtt-eu-01.iot.meethue.com_TCP_dst_443_1748868476": {
+                "children": [
+                  {
+                    "3_192.168.1.193-192.168.1.141_TCP_dst_443_1748894039": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "mqtt-eu-01.iot.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748894039": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "mqtt-eu-01.iot.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748894039": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "224.0.0.251"
+                              },
+                              "udp": {
+                                "src-port": 5353,
+                                "dst-port": 5353
+                              },
+                              "dns": {
+                                "response": false,
+                                "qtype": "PTR",
+                                "domain-name": "_hap._tcp.local"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "mqtt-eu-01.iot.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api2.amplitude.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "mqtt-eu-01.iot.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-192.168.1.141_TCP_dst_443_1748868476": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-224.0.0.251_UDP_src_5353_dst_5353_DNS_response-False_qtype-PTR_domain-name-_hap._tcp.local_1748868476": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748868476": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "224.0.0.251"
+                        },
+                        "udp": {
+                          "src-port": 5353,
+                          "dst-port": 5353
+                        },
+                        "dns": {
+                          "response": false,
+                          "qtype": "PTR",
+                          "domain-name": "_hap._tcp.local"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "api2.amplitude.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "224.0.0.251"
+                  },
+                  "udp": {
+                    "src-port": 5353,
+                    "dst-port": 5353
+                  },
+                  "dns": {
+                    "response": false,
+                    "qtype": "PTR",
+                    "domain-name": "_hap._tcp.local"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "1_192.168.1.193-api2.amplitude.com_TCP_dst_443_1748859977": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "api2.amplitude.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      }
+    ],
+    "data": {
+      "depth": 0,
+      "flows": []
+    }
+  }
+}

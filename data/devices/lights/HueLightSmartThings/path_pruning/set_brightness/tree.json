@@ -1,0 +1,499 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.141-data.meethue.com_TCP_dst_443_1750321965": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "data.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      },
+      {
+        "1_192.168.1.141-mqtt-eu-01.iot.meethue.com_TCP_dst_443_1750321965": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "mqtt-eu-01.iot.meethue.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      },
+      {
+        "1_192.168.1.193-api.smartthings.com_TCP_dst_443_1750321965": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "api.smartthings.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      },
+      {
+        "1_192.168.1.193-dls.di.atlas.samsung.com_TCP_dst_443_1750321965": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "dls.di.atlas.samsung.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      },
+      {
+        "1_192.168.1.222-52.18.59.54_TCP_dst_443_1750321965": {
+          "children": [
+            {
+              "2_192.168.1.141-mqtt-eu-01.iot.meethue.com_TCP_dst_443_1750334851": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.222",
+                          "dst": "52.18.59.54"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "mqtt-eu-01.iot.meethue.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-api.smartthings.com_TCP_dst_443_1750334851": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.222",
+                          "dst": "52.18.59.54"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "api.smartthings.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-dls.di.atlas.samsung.com_TCP_dst_443_1750334851": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.222",
+                          "dst": "52.18.59.54"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "dls.di.atlas.samsung.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_192.168.1.222-dc2-eu01-euwest1.connect.smartthings.com_TCP_dst_443_1750334851": {
+                "children": [
+                  {
+                    "3_192.168.1.141-mqtt-eu-01.iot.meethue.com_TCP_dst_443_1750343450": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "52.18.59.54"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "dc2-eu01-euwest1.connect.smartthings.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "mqtt-eu-01.iot.meethue.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      },
+                      "last": true
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-api.smartthings.com_TCP_dst_443_1750343450": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "52.18.59.54"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "dc2-eu01-euwest1.connect.smartthings.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "api.smartthings.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_192.168.1.193-dls.di.atlas.samsung.com_TCP_dst_443_1750343450": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "52.18.59.54"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "dc2-eu01-euwest1.connect.smartthings.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "dls.di.atlas.samsung.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_ws.meethue.com-192.168.1.141_TCP_src_443_1750343450": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "52.18.59.54"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.222",
+                                "dst": "dc2-eu01-euwest1.connect.smartthings.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "ws.meethue.com",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.222",
+                          "dst": "52.18.59.54"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.222",
+                          "dst": "dc2-eu01-euwest1.connect.smartthings.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_ws.meethue.com-192.168.1.141_TCP_src_443_1750334851": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.222",
+                          "dst": "52.18.59.54"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "ws.meethue.com",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.222",
+                    "dst": "52.18.59.54"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "1_34.117.13.189-192.168.1.141_TCP_src_443_1750321965": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "34.117.13.189",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "src-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      }
+    ],
+    "data": {
+      "depth": 0,
+      "flows": []
+    }
+  }
+}

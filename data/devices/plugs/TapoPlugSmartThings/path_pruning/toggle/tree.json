@@ -1,0 +1,55 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.193-api.smartthings.com_TCP_dst_443_1755783864": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "api.smartthings.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          },
+          "last": true
+        }
+      },
+      {
+        "1_192.168.1.193-dls.di.atlas.samsung.com_TCP_dst_443_1755783864": {
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "dls.di.atlas.samsung.com"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ],
+            "failed": true
+          }
+        }
+      }
+    ],
+    "data": {
+      "depth": 0,
+      "flows": []
+    }
+  }
+}

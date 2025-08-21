@@ -1,0 +1,417 @@
+{
+  "0_root": {
+    "children": [
+      {
+        "1_192.168.1.134-54.76.205.201_TCP_dst_443_1755705619": {
+          "children": [
+            {
+              "2_192.168.1.134-euw1-device-cloudgateway.iot.i.tplinknbu.com_TCP_dst_443_1755706951": {
+                "children": [
+                  {
+                    "3_192.168.1.193-192.168.1.134_TCP_dst_80_HTTP_response-False_method-POST_uri--app-request-_1755709075": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "54.76.205.201"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "self",
+                                "dst": "euw1-device-cloudgateway.iot.i.tplinknbu.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "POST",
+                                "uri": "/app/request*"
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ]
+                      },
+                      "last": true
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "54.76.205.201"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "euw1-device-cloudgateway.iot.i.tplinknbu.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            },
+            {
+              "2_192.168.1.193-192.168.1.134_TCP_dst_80_HTTP_response-False_method-POST_uri--app-request-_1755706951": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "self",
+                          "dst": "54.76.205.201"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "POST",
+                          "uri": "/app/request*"
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "self",
+                    "dst": "54.76.205.201"
+                  },
+                  "tcp": {
+                    "dst-port": 443
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      },
+      {
+        "1_192.168.1.193-192.168.1.134_TCP_dst_80_HTTP_response-False_method-POST_uri--app-request-_1755705619": {
+          "children": [
+            {
+              "2_192.168.1.193-euw1-app-server.iot.i.tplinkcloud.com_TCP_dst_443_1755706325": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "POST",
+                          "uri": "/app/request*"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "euw1-app-server.iot.i.tplinkcloud.com"
+                        },
+                        "tcp": {
+                          "dst-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ],
+                  "failed": true
+                }
+              }
+            },
+            {
+              "2_54.76.205.201-192.168.1.134_TCP_src_443_1755706325": {
+                "children": [
+                  {
+                    "3_192.168.1.193-euw1-app-tapo-care.i.tplinkcloud.com_TCP_dst_443_1755708388": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "POST",
+                                "uri": "/app/request*"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "54.76.205.201",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "euw1-app-tapo-care.i.tplinkcloud.com"
+                              },
+                              "tcp": {
+                                "dst-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_euw1-app-cloudgateway.iot.i.tplinkcloud.com-192.168.1.193_TCP_src_443_1755708388": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "POST",
+                                "uri": "/app/request*"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "54.76.205.201",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "euw1-app-cloudgateway.iot.i.tplinkcloud.com",
+                                "dst": "192.168.1.193"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  },
+                  {
+                    "3_euw1-device-cloudgateway.iot.i.tplinknbu.com-192.168.1.134_TCP_src_443_1755708388": {
+                      "data": {
+                        "depth": 3,
+                        "flows": [
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "192.168.1.193",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "dst-port": 80
+                              },
+                              "http": {
+                                "response": false,
+                                "method": "POST",
+                                "uri": "/app/request*"
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "54.76.205.201",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          },
+                          {
+                            "protocols": {
+                              "ipv4": {
+                                "src": "euw1-device-cloudgateway.iot.i.tplinknbu.com",
+                                "dst": "self"
+                              },
+                              "tcp": {
+                                "src-port": 443
+                              }
+                            },
+                            "bidirectional": true
+                          }
+                        ],
+                        "failed": true
+                      }
+                    }
+                  }
+                ],
+                "data": {
+                  "depth": 2,
+                  "flows": [
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "192.168.1.193",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "dst-port": 80
+                        },
+                        "http": {
+                          "response": false,
+                          "method": "POST",
+                          "uri": "/app/request*"
+                        }
+                      },
+                      "bidirectional": true
+                    },
+                    {
+                      "protocols": {
+                        "ipv4": {
+                          "src": "54.76.205.201",
+                          "dst": "self"
+                        },
+                        "tcp": {
+                          "src-port": 443
+                        }
+                      },
+                      "bidirectional": true
+                    }
+                  ]
+                }
+              }
+            }
+          ],
+          "data": {
+            "depth": 1,
+            "flows": [
+              {
+                "protocols": {
+                  "ipv4": {
+                    "src": "192.168.1.193",
+                    "dst": "self"
+                  },
+                  "tcp": {
+                    "dst-port": 80
+                  },
+                  "http": {
+                    "response": false,
+                    "method": "POST",
+                    "uri": "/app/request*"
+                  }
+                },
+                "bidirectional": true
+              }
+            ]
+          }
+        }
+      }
+    ],
+    "data": {
+      "depth": 0,
+      "flows": []
+    }
+  }
+}
