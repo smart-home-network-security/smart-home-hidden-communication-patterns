@@ -9,7 +9,7 @@ cmd.sh
 
 ## Exceptions
 # CMake config
-!CMakeLists.txt
+!./CMakeLists.txt
 # Event signature trees (in JSON format)
 !tree*.json
 
