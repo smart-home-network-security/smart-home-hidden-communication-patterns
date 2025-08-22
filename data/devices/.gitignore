@@ -16,5 +16,6 @@ cmd.sh
 # Ignore PCAP files (they should go in the pcap folder)
 *.pcap
 
-# Ignore folders of old experiments
+# Ignore old data
 old/
+tree.old.json
