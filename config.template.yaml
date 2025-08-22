@@ -25,10 +25,10 @@ access-point:
 exp-param:
   node-pruning: true
   match-random-ports: false
-  n-events: 20
+  n-events: 10
   pcap-timeout: 20
-  wait-low: 40
-  wait-high: 150
+  wait-low: 60
+  wait-high: 120
 
 # For boot events:
 # Controllable plugs' metadata

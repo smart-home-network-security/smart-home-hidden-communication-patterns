@@ -2,14 +2,14 @@
   "0_root": {
     "children": [
       {
-        "1_192.168.1.110-api.smartthings.com_TCP_dst_443_1732097864": {
-          "data": [
-            1,
-            [
+        "1_192.168.1.193-api.smartthings.com_TCP_dst_443_1755789385": {
+          "data": {
+            "depth": 1,
+            "flows": [
               {
                 "protocols": {
                   "ipv4": {
-                    "src": "192.168.1.110",
+                    "src": "192.168.1.193",
                     "dst": "api.smartthings.com"
                   },
                   "tcp": {
@@ -18,19 +18,20 @@
                 },
                 "bidirectional": true
               }
-            ]
-          ]
+            ],
+            "failed": true
+          }
         }
       },
       {
-        "1_192.168.1.110-dls.di.atlas.samsung.com_TCP_dst_443_1732097864": {
-          "data": [
-            1,
-            [
+        "1_192.168.1.193-dls.di.atlas.samsung.com_TCP_dst_443_1755789385": {
+          "data": {
+            "depth": 1,
+            "flows": [
               {
                 "protocols": {
                   "ipv4": {
-                    "src": "192.168.1.110",
+                    "src": "192.168.1.193",
                     "dst": "dls.di.atlas.samsung.com"
                   },
                   "tcp": {
@@ -39,23 +40,24 @@
                 },
                 "bidirectional": true
               }
-            ]
-          ]
+            ],
+            "failed": true
+          }
         }
       },
       {
-        "1_34.253.47.149-192.168.1.110_TCP_src_443_1732097864": {
+        "1_52.19.230.239-192.168.1.222_TCP_src_443_1755789385": {
           "children": [
             {
-              "2_192.168.1.110-api.smartthings.com_TCP_dst_443_1732105649": {
-                "data": [
-                  2,
-                  [
+              "2_192.168.1.193-api.smartthings.com_TCP_dst_443_1755791409": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
                     {
                       "protocols": {
                         "ipv4": {
-                          "src": "34.253.47.149",
-                          "dst": "192.168.1.110"
+                          "src": "52.19.230.239",
+                          "dst": "self"
                         },
                         "tcp": {
                           "src-port": 443
@@ -66,7 +68,7 @@
                     {
                       "protocols": {
                         "ipv4": {
-                          "src": "192.168.1.110",
+                          "src": "192.168.1.193",
                           "dst": "api.smartthings.com"
                         },
                         "tcp": {
@@ -76,19 +78,19 @@
                       "bidirectional": true
                     }
                   ]
-                ]
+                }
               }
             },
             {
-              "2_192.168.1.110-dls.di.atlas.samsung.com_TCP_dst_443_1732105649": {
-                "data": [
-                  2,
-                  [
+              "2_192.168.1.193-dls.di.atlas.samsung.com_TCP_dst_443_1755791409": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
                     {
                       "protocols": {
                         "ipv4": {
-                          "src": "34.253.47.149",
-                          "dst": "192.168.1.110"
+                          "src": "52.19.230.239",
+                          "dst": "self"
                         },
                         "tcp": {
                           "src-port": 443
@@ -99,7 +101,7 @@
                     {
                       "protocols": {
                         "ipv4": {
-                          "src": "192.168.1.110",
+                          "src": "192.168.1.193",
                           "dst": "dls.di.atlas.samsung.com"
                         },
                         "tcp": {
@@ -109,19 +111,19 @@
                       "bidirectional": true
                     }
                   ]
-                ]
+                }
               }
             },
             {
-              "2_dc2-eu01-euwest1.connect.smartthings.com-192.168.1.222_TCP_src_443_1732105649": {
-                "data": [
-                  2,
-                  [
+              "2_dc2-eu01-euwest1.connect.smartthings.com-192.168.1.222_TCP_src_443_1755791409": {
+                "data": {
+                  "depth": 2,
+                  "flows": [
                     {
                       "protocols": {
                         "ipv4": {
-                          "src": "34.253.47.149",
-                          "dst": "192.168.1.110"
+                          "src": "52.19.230.239",
+                          "dst": "self"
                         },
                         "tcp": {
                           "src-port": 443
@@ -141,173 +143,19 @@
                       },
                       "bidirectional": true
                     }
-                  ]
-                ]
-              }
-            },
-            {
-              "2_spigot-regional.api.smartthings.com-192.168.1.110_TCP_src_443_1732105649": {
-                "data": [
-                  2,
-                  [
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "34.253.47.149",
-                          "dst": "192.168.1.110"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    },
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "spigot-regional.api.smartthings.com",
-                          "dst": "192.168.1.110"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    }
-                  ]
-                ]
+                  ],
+                  "failed": true
+                }
               }
             }
           ],
-          "data": [
-            1,
-            [
+          "data": {
+            "depth": 1,
+            "flows": [
               {
                 "protocols": {
                   "ipv4": {
-                    "src": "34.253.47.149",
-                    "dst": "192.168.1.110"
-                  },
-                  "tcp": {
-                    "src-port": 443
-                  }
-                },
-                "bidirectional": true
-              }
-            ]
-          ]
-        }
-      },
-      {
-        "1_dc2-eu01-euwest1.connect.smartthings.com-192.168.1.222_TCP_src_443_1732097864": {
-          "children": [
-            {
-              "2_192.168.1.110-dls.di.atlas.samsung.com_TCP_dst_443_1732103784": {
-                "data": [
-                  2,
-                  [
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "dc2-eu01-euwest1.connect.smartthings.com",
-                          "dst": "self"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    },
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "192.168.1.110",
-                          "dst": "dls.di.atlas.samsung.com"
-                        },
-                        "tcp": {
-                          "dst-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    }
-                  ]
-                ]
-              }
-            },
-            {
-              "2_dc2-eu01-euwest1.connect.smartthings.com-192.168.1.222_TCP_src_443_1732103784": {
-                "data": [
-                  2,
-                  [
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "dc2-eu01-euwest1.connect.smartthings.com",
-                          "dst": "self"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    },
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "dc2-eu01-euwest1.connect.smartthings.com",
-                          "dst": "self"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    }
-                  ]
-                ]
-              }
-            },
-            {
-              "2_spigot-regional.api.smartthings.com-192.168.1.110_TCP_src_443_1732103784": {
-                "data": [
-                  2,
-                  [
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "dc2-eu01-euwest1.connect.smartthings.com",
-                          "dst": "self"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    },
-                    {
-                      "protocols": {
-                        "ipv4": {
-                          "src": "spigot-regional.api.smartthings.com",
-                          "dst": "192.168.1.110"
-                        },
-                        "tcp": {
-                          "src-port": 443
-                        }
-                      },
-                      "bidirectional": true
-                    }
-                  ]
-                ]
-              }
-            }
-          ],
-          "data": [
-            1,
-            [
-              {
-                "protocols": {
-                  "ipv4": {
-                    "src": "dc2-eu01-euwest1.connect.smartthings.com",
+                    "src": "52.19.230.239",
                     "dst": "self"
                   },
                   "tcp": {
@@ -317,34 +165,13 @@
                 "bidirectional": true
               }
             ]
-          ]
-        }
-      },
-      {
-        "1_spigot-regional.api.smartthings.com-192.168.1.110_TCP_src_443_1732097864": {
-          "data": [
-            1,
-            [
-              {
-                "protocols": {
-                  "ipv4": {
-                    "src": "spigot-regional.api.smartthings.com",
-                    "dst": "192.168.1.110"
-                  },
-                  "tcp": {
-                    "src-port": 443
-                  }
-                },
-                "bidirectional": true
-              }
-            ]
-          ]
+          }
         }
       }
     ],
-    "data": [
-      0,
-      []
-    ]
+    "data": {
+      "depth": 0,
+      "flows": []
+    }
   }
 }
