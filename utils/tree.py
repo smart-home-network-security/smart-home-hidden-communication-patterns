@@ -124,34 +124,58 @@ def load_from_json(tree_file_path: str, to_flows: bool = False) -> Tree:
     return build_tree(Tree(), tree_json, to_flows=to_flows)
 
 
-def get_node_depth(node: Node) -> int:
+def get_node_data(node: dict | Node) -> dict:
+    """
+    Get a tree node's data.
+
+    Args:
+        node (dict | treelib.Node): given node
+    Returns:
+        dict: Data associated with the node.
+    """
+    if isinstance(node, Node):
+        return node.data
+    elif isinstance(node, dict):
+        return node.get("data", {})
+    return {}
+
+
+def get_node_depth(node: dict | Node) -> int:
     """
     Get a tree node's depth.
 
     Args:
-        node (treelib.Node): given node
+        node (dict |treelib.Node): given node
     Returns:
         int: Depth of the node.
     """
-    if isinstance(node.data, tuple) or isinstance(node.data, list):
-        return node.data[0]
-    elif isinstance(node.data, dict):
-        return node.data.get("depth", 0)
+    # Get node data
+    data = get_node_data(node)
+
+    # Get depth
+    if isinstance(data, tuple) or isinstance(data, list):
+        return data[0]
+    elif isinstance(data, dict):
+        return data.get("depth", 0)
 
 
-def get_node_flows(node: Node) -> list:
+def get_node_flows(node: dict | Node) -> list:
     """
     Get a tree node's list of flows.
 
     Args:
-        node (treelib.Node): given node
+        node (dict | treelib.Node): given node
     Returns:
         list: list of flows associated with the node.
     """
-    if isinstance(node.data, tuple) or isinstance(node.data, list):
-        return node.data[1]
-    elif isinstance(node.data, dict):
-        return node.data.get("flows", [])
+    # Get node data
+    data = get_node_data(node)
+
+    # Get flows
+    if isinstance(data, tuple) or isinstance(data, list):
+        return data[1]
+    elif isinstance(data, dict):
+        return data.get("flows", [])
 
 
 def display_tree(tree: Tree, id_highlight: str = None) -> None:
